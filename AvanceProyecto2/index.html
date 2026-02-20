@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avance de Proyecto 2 - Mi Sitio Web</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body style="background-color: brown;">
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="perfil.jpg" alt="Logo"></a></div>
+        <ul class="nav-links">
+            <li><a href="#encabezados">Encabezados</a></li>
+            <li><a href="#parrafos">Párrafos</a></li>
+            <li><a href="#enlaces">Enlaces</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#formato">Formato</a></li>
+            <li><a href="#imgs">Imagenes</a></li>
+        </ul>
+    </nav>
+
+    <header class="headerimg">
+        <img src="bannerCat.jpg" alt="imgHeader">
+        <h1 class="tituloHeader">Avance de Proyecto 2</h1>
+    </header>
+
+    <main class="body-content">
+        <section class="intro">
+            <h2 class="tittlegeneral">Contenido del Curso</h2>
+            <p class="pgeneral">
+                En esta sección encontraras un resumen de los elementos HTML aprendidos durante la clase. 
+                Puedes navegar con la barra de navegacion de arriba o aqui abajito con las imagenes.
+            </p>
+            
+            <nav class="listings">
+                <ul>
+                    <li class="litem">
+                        <a href="#encabezados"><img src="h1img.jpg" alt="Ir a Encabezados"><br>Encabezados</a>
+                    </li>
+                    <li class="litem">
+                        <a href="#parrafos"><img src="pimg.png" alt="Ir a Párrafos"><br>Parrafos</a>
+                    </li>
+                    <li class="litem">
+                        <a href="#enlaces"><img src="aimg.png" alt="Ir a Enlaces"><br>Enlaces</a>
+                    </li>
+                    <li class="litem">
+                        <a href="#listas"><img src="limg.jpg" alt="Ir a Listas"><br>Listas</a>
+                    </li>
+                    <li class="litem">
+                        <a href="#formato"><img src="formimg.png" alt="Ir a Formato"><br>Formato</a>
+                    </li>
+                    <li class="litem">
+                        <a href="#imgs"><img src="imgimg.jpg" alt="Ir a Formato"><br>Imagenes</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <hr> <section id="encabezados" class="secSty">
+            <h1>Encabezado H1: Titulos Principales</h1>
+            <h2>Encabezado H2: Subtitulos</h2>
+            <h3>Encabezado H3: Secciones menores</h3>
+            <p>Los encabezados ayudan a dar jerarquia al texto respecto a tamaños</p>
+            <p>Es importante porque ayuda a identificar el nivel de cada texto o seccion de las pags</p>
+            <p>En este caso se uso del h1 hasta el h3 para detectar cada uno</p>
+            <img src="h1img.jpg" alt="Ejemplo de Encabezados">
+        </section>
+
+        <section id="parrafos" class="secSty">
+            <h2>Uso de Parrafos (Etiqueta p)</h2>
+            <p>La etiqueta p se utiiliza como su etiqueta lo dice pues para parrafos</p>
+            <p>Podemos alinear parrafos y darles estilo para manejar mejor textos grandotes</p>
+            <p>Separar ideas en parrafos distintos siempre es buena practica incluso sino se trata de programacion</p>
+            <img src="pimg.png" alt="Ejemplo de Párrafos">
+        </section>
+
+        <section id="enlaces" class="secSty">
+            <h2>Enlaces e Hipervinculos (Etiqueta a)</h2>
+            <p>Los enlaces pueden conectar diferentes paginas con otras secciones, paginas web, enlaces a otros sitios etc.</p>
+            <p>Puedes visitar sitios externos como <a href="https://www.google.com" target="_blank">GOOGLE</a> para buscar mas info</p>
+            <p>El atributo "href" indica el destino, mientras que "target='_blank'" abre el enlace en una pestaña nueva.</p>
+            <img src="aimg.png" alt="Ejemplo de Enlaces">
+        </section>
+
+        <section id="listas" class="secSty">
+            <h2>Listas Ordenadas y No Ordenadas</h2>
+            <p>Las listas ayudan a enumerar elementos de manera organizada, exites las ol y ul</p>
+            <p>Dentro de cada lista, utilizamos la etiqueta "li" para definir cada lista individual</p>
+            <p>Este proyecto hace uso de listas para la barra de nav y las imagenes de arriba</p>
+            <img src="limg.jpg" alt="Ejemplo de Listas">
+        </section>
+
+        <section id="formato" class="secSty">
+            <h2>Formato de Texto negritas o italicas</h2>
+            <p>Para resaltar texto importante podemos usar la etiqueta <b>bold (negrita)</b>.</p>
+            <p>También existe la etiqueta <i>italic (italica o cursiva)</i> para dar enfasis</p>
+            <p>Incluso podemos <u>subrayar (u)</u> palabras.</p>
+            <img src="formimg.png" alt="Ejemplo de Formato">
+        </section>
+
+        <section id="imgs" class="secSty">
+            <h1>Imagenes</h1>
+            <p>Una imagen dice mas que mil palabras, siempre son un recurso fundamental</p>
+            <img src="perfil.jpg" alt="Ejemplo gatini bananini">
+            <p>Se pueden representar con la etiqueta "img", donde "src="" " es el archivo al que hace referencia</p>
+            <p>"alt" nos sirve para saber a que se referia la imagen en caso de un error</p>
+            <img src="imgimg.jpg" alt="Ejemplo de Imagenes">
+        </section>
+    </main>
+
+    <footer style="text-align: center; color: white;">
+        <p>2026 - Avance de Proyecto 2 - Programacion Web</p>
+    </footer>
+</body>
+</html>

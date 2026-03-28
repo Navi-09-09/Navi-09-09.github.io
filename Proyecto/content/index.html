@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hollow Knight - Contenido</title>
+    
+    <script src="../assets/js/color-modes.js"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="carousel.css" rel="stylesheet" />
+
+    <style>
+      /* Estilos generales de la plantilla */
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .carousel-item {
+        height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+        min-height: 500px; /* Para que en celulares no se vea minúsculo */
+      }
+
+      /* Ajuste para que tus imágenes del carrusel se vean bien */
+      .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .carousel-caption h1, .carousel-caption p {
+        color: white; /* Asegura que sea blanco */
+        text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+      }
+
+    </style>
+  </head>
+  <body>
+    
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">RECEPTACULOS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contenido</a></li>
+              <li class="nav-item"><a class="nav-link" href="references.html">Referencias</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="pictures/carousel1.jpg" alt="Hollow Knight 1">
+            
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>La vasija.</h1>
+                <p>Conoce tu proposito dentro del reino.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Hollow Knight</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="pictures/carousel2.jpg" alt="Hornet">
+
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>La verdad.</h1>
+                <p>Descubre la historia detras de las ruinas de Hallownest.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Leer Lore</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="pictures/carousel3.jpg" alt="Hallownest">
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Reino Perdido.</h1>
+                <p>Sumergete al vacio y explora el reino.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Galería</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <div class="container marketing">
+        <div class="row">
+          <!--SECCIONES PODEROSAS 1XD-->
+          <div class="col-lg-4">
+            <img src="pictures/Characters.png" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Personajes</h2>
+            <p>Conoce a los habitantes de este mundo.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+
+          <div class="col-lg-4">
+            <img src="pictures/Villains.jpg" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Jefes</h2>
+            <p>Enfréntate a poderosos guerreros.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+
+          <div class="col-lg-4">
+            <img src="pictures/Jugabilidad.jpg" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Jugabilidad</h2>
+            <p>Aprende el sistema de combate.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+        </div> <!--SECCIONES PODEROSAS 1 SE ACABO-->
+
+        <div class="container marketing">
+        <div class="row">
+          <!--SECCIONES PODEROSAS 2XD-->
+          <div class="col-lg-4">
+            <img src="pictures/Amuletos.jpg" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Amuletos</h2>
+            <p>Admira el arbol de habilidades.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+
+          <div class="col-lg-4">
+            <img src="pictures/newROLEX.jpg" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Lore</h2>
+            <p>Conoce la historia detras de la luz.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+
+          <div class="col-lg-4">
+            <img src="pictures/map.jpg" class="rounded-circle" width="140" height="140" alt="Icono">
+            <h2 class="fw-normal">Mapa</h2>
+            <p>Sumergete en el vacio de hallownest.</p>
+            <p><a class="btn btn-secondary" href="#">Detalles &raquo;</a></p>
+          </div>
+        </div> <!--SECCIONES PODEROSAS 2 SE ACABO-->
+
+        <hr class="featurette-divider" />
+
+        <!--Contenedores tipo tarjetotas-->
+        <div class="row featurette align-items-center">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Ambientación Única. <span class="text-body-secondary">Bocetos.</span></h2>
+            <p class="lead">Hollow Knight destaca por su arte dibujado a mano, creando un mundo melancólico y hermoso.</p>
+            <p><a class="btn btn-outline-light" href="detalles_arte.html">Leer más sobre el diseño &raquo;</a></p>
+          </div>
+          <div class="col-md-5">
+            <img src="pictures/art.webp" class="img-fluid mx-auto rounded shadow" alt="Arte HK">
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Banda Sonora. <span class="text-body-secondary">Música magistral.</span></h2>
+            <p class="lead">Compuesta por Christopher Larkin, cada zona tiene su propia esencia musical que te sumerge en la atmósfera.</p>
+            <p><a class="btn btn-outline-light" href="detalles_musica.html">Escuchar muestras &raquo;</a></p>
+          </div>
+          <div class="col-md-5 order-md-1">
+             <img src="pictures/BandaSonora.jpg" class="img-fluid mx-auto rounded shadow" alt="Musica HK">
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette align-items-center">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Combate Desafiante. <span class="text-body-secondary">Precisión y Alma.</span></h2>
+            <p class="lead">Enfréntate a más de 150 enemigos feroces y 35 jefes épicos en un sistema de combate rápido y fluido.</p>
+            <p><a class="btn btn-outline-light" href="detalles_combate.html">Guía de Jefes &raquo;</a></p>
+          </div>
+          <div class="col-md-5">
+             <img src="pictures/combat_content.jpg" class="img-fluid mx-auto rounded shadow" alt="Combate HK">
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Lore Profundo. <span class="text-body-secondary">Haya la verdad.</span></h2>
+            <p class="lead">Reconstruye la historia en ruinas de Hallownest a través de sutiles pistas ambientales y diálogos crípticos.</p>
+            <p><a class="btn btn-outline-light" href="detalles_lore.html">Explorar la historia &raquo;</a></p>
+          </div>
+          <div class="col-md-5 order-md-1">
+             <img src="pictures/Lore.webp" class="img-fluid mx-auto rounded shadow" alt="Lore HK">
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <!--REDES SOCIALES-->
+        <div class="container mt-5 marketing">
+          <h2 class="text-center mb-5 display-4 fw-bold">Hallownest en Vivo</h2>
+
+          <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-md-5 d-flex justify-content-center mb-4 mb-md-0">
+              <div class="shadow-lg rounded overflow-hidden" style="max-width: 325px;">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@benjamin_.gonzalez_.p/video/7551216059752238342" data-video-id="7551216059752238342" style="max-width: 605px;min-width: 325px;"> 
+                  <section> 
+                    <a target="_blank" title="@benjamin_.gonzalez_.p" href="https://www.tiktok.com/@benjamin_.gonzalez_.p?refer=embed">@benjamin_.gonzalez_.p</a> 
+                    <p>Hollow Knight es el claro ejemplo de que si te rindes ahora...</p> 
+                    <a title="hollowknight" target="_blank" href="https://www.tiktok.com/tag/hollowknight?refer=embed">#hollowknight</a> 
+                  </section> 
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-7 ps-md-5 text-center text-md-start">
+              <span class="badge bg-primary mb-2">Reflexión</span>
+              <h2 class="fw-bold">Persistencia en el Abismo</h2>
+              <p class="lead text-body-secondary">La comunidad comparte cómo la dificultad de Hollow Knight nos enseña a no rendirnos. Un mensaje de motivación directo desde el abismo.</p>
+              <a class="btn btn-primary rounded-pill px-4" href="https://www.tiktok.com/@benjamin_.gonzalez_.p/video/7551216059752238342" target="_blank">Ver en TikTok</a>
+            </div>
+          </div>
+
+          <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-md-7 order-md-1 order-2 pe-md-5 text-center text-md-end">
+              <span class="badge bg-danger mb-2">Arte Oficial</span>
+              <h2 class="fw-bold">Galería de Team Cherry</h2>
+              <p class="lead text-body-secondary">Explora las ilustraciones detalladas que dan vida a los personajes. El estilo visual que definió una era de juegos indie.</p>
+              <a class="btn btn-outline-danger rounded-pill px-4" href="https://www.instagram.com/teamcherryunofficial/" target="_blank">Ver Instagram</a>
+            </div>
+            <div class="col-md-5 order-md-2 order-1 d-flex justify-content-center mb-4 mb-md-0">
+              <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B_P2ue1pgFx/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%;">
+                <div style="padding:16px;"> <a href="https://www.instagram.com/p/B_P2ue1pgFx/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Ver publicación</a></div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="row align-items-center mb-5 pb-5 border-bottom">
+            <div class="col-md-5 d-flex justify-content-center mb-4 mb-md-0">
+              <blockquote class="twitter-tweet" data-theme="dark">
+                <p lang="en" dir="ltr">Four days until release! Hollow Knight: Silksong will be available on 4th September.<br><br>Release times:<br>7AM PT | 10AM ET | 4PM CEST | 11PM JST<br><br>Game price:<br>USD $19.99 | EUR €19.99 | JPY ¥2300 <a href="https://t.co/JeDmozItpX">pic.twitter.com/JeDmozItpX</a></p>&mdash; Team Cherry (@TeamCherryGames) <a href="https://twitter.com/TeamCherryGames/status/1962330350681735642?ref_src=twsrc%5Etfw">September 1, 2025</a>
+              </blockquote>
+            </div>
+            <div class="col-md-7 ps-md-5 text-center text-md-start">
+              <span class="badge bg-dark mb-2">Noticias</span>
+              <h2 class="fw-bold">Comunicados Oficiales</h2>
+              <p class="lead text-body-secondary">No te pierdas ni un solo detalle sobre fechas de lanzamiento, precios y actualizaciones de Silksong directamente desde Team Cherry.</p>
+              <a class="btn btn-dark rounded-pill px-4" href="https://twitter.com/TeamCherryGames" target="_blank">Seguir en X</a>
+            </div>
+          </div>
+
+          <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-10">
+              <span class="badge bg-secondary mb-2">Tráiler</span>
+              <h2 class="fw-bold display-5 mb-3">Revelación del juego</h2>
+              <div class="ratio ratio-16x9 shadow-lg rounded mb-4">
+                <iframe src="https://www.youtube.com/embed/JuP47fRBsWg?si=cM0tS9c5pVr5o8ku" title="YouTube video player" allowfullscreen></iframe>
+              </div>
+              <p class="lead">Revive el tráiler que paralizó a la comunidad. La música de Christopher Larkin en su máxima expresión.</p>
+              <a class="btn btn-outline-dark rounded-pill" href="https://www.youtube.com/@TeamCherryGames" target="_blank">Ir al Canal Oficial</a>
+            </div>
+          </div>
+
+          <script async src="https://www.tiktok.com/embed.js"></script>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+
+        <hr class="featurette-divider" />
+      
+      <footer class="container">
+        <p class="float-end"><a href="#">Ir arriba</a></p>
+        <p>&copy; 2026 Hollow Knight Fan Page &middot; <a href="#">Privacidad</a></p>
+      </footer>
+
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

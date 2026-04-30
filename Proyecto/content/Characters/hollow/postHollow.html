@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Personajes  - Hollow Knight</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link items-nav" href="/index.html">Inicio</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Personajes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../hollow/postHollow.html">Hollow Knight</a></li>
+                        <li><a class="dropdown-item" href="../hornet/postHornet.html">Hornet</a></li>
+                        <li><a class="dropdown-item" href="#">Rey palido</a></li>
+                        <li><a class="dropdown-item" href="#">Cornifer</a></li>
+                        <li><a class="dropdown-item" href="#">Zote</a></li>
+                        <li><a class="dropdown-item" href="#">NPC's de zona</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">NPC's especiales</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Jefes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Soñadores</a></li>
+                        <li><a class="dropdown-item" href="#">Receptaculo</a></li>
+                        <li><a class="dropdown-item" href="#">Radiance</a></li>
+                        <li><a class="dropdown-item" href="#">Oniricos</a></li>
+                        <li><a class="dropdown-item" href="#">Grimm</a></li>
+                        <li><a class="dropdown-item" href="#">Jefes de zona</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Jefes secretos y especiales</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Amuletos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Tipos de amuletos</a></li>
+                        <li><a class="dropdown-item" href="#">Sobrecarga</a></li>
+                        <li><a class="dropdown-item" href="#">Combinaciones</a></li>
+                        <li><a class="dropdown-item" href="#">Muescas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Donde encontrarlos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lore
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Hallownest</a></li>
+                        <li><a class="dropdown-item" href="#">Radiance y el Rey Palido</a></li>
+                        <li><a class="dropdown-item" href="#">Hornet y nido profundo</a></li>
+                        <li><a class="dropdown-item" href="#">Vasija</a></li>
+                        <li><a class="dropdown-item" href="#">Zonas de hallownest</a></li>
+                        <li><a class="dropdown-item" href="#">Soñadores</a></li>
+                        <li><a class="dropdown-item" href="#">El vacio</a></li>
+                        <li><a class="dropdown-item" href="#">Sueños oniricos</a></li>
+                        <li><a class="dropdown-item" href="#">Palacio blanco</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Historias ocultas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mapa
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">BocaSucia</a></li>
+                        <li><a class="dropdown-item" href="#">Ciudad de lagrimas</a></li>
+                        <li><a class="dropdown-item" href="#">Sendero Verde</a></li>
+                        <li><a class="dropdown-item" href="#">Nido Profundo</a></li>
+                        <li><a class="dropdown-item" href="#">Limite del reino</a></li>
+                        <li><a class="dropdown-item" href="#">Cuencua antigua</a></li>
+                        <li><a class="dropdown-item" href="#">Cumbre de cristal</a></li>
+                        <li><a class="dropdown-item" href="#">Canales Reales</a></li>
+                        <li><a class="dropdown-item" href="#">Paramos Fungicos</a></li>
+                        <li><a class="dropdown-item" href="#">Cañon Nublado</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Mapa completo</a></li>
+                        <li><a class="dropdown-item" href="#">Zonas secretas</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Banda Sonora
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Mejores Soundtracks</a></li>
+                        <li><a class="dropdown-item" href="#">Compositor</a></li>
+                        <li><a class="dropdown-item" href="#">Temas de cada zona</a></li>
+                        <li><a class="dropdown-item" href="#">Tema de Hornet</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Temas extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Creadores
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Team Cherry</a></li>
+                        <li><a class="dropdown-item" href="#">Empresas Indie</a></li>
+                        <li><a class="dropdown-item" href="#">Referencias</a></li>
+                        <li><a class="dropdown-item" href="#">Contacto</a></li>
+                        </ul>
+                    </li>
+
+                    </ul>
+
+                    <form class="d-flex search-wrapper">
+
+                    <div class="background-keywords">
+                        <span>Noticias</span> <span>Tendencias</span> <span>Música</span> <span>Tutoriales</span>
+                    </div>
+
+                    <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+                    <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+                    </form>
+
+                </div>
+                </div>
+            </nav>
+        </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+        <!-- Page content -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content -->
+                    <article>
+                        <!-- Post header -->
+                        <header class="mb-4">
+                            <!-- Post title -->
+                            <h1 class="fw-bolder mb-1">Hollow Knight!</h1>
+                            <!-- Post date -->
+                            <div class="text-muted fst-italic mb-2">Sin voz, sin mente y sin voluntad</div>
+                            <!-- Post categories -->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Characters</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Hollow Knight</a>
+                        </header>
+                        <!-- Preview image -->
+                        <figure class="mb-4"><img class="img-fluid rounded posthk" src="../../pictures/palpostHK.jpg" alt="..." /></figure>
+                        <!-- Post content -->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">Aunque los jugadores suelen llamarlo "Hollow Knight", su nombre oficial es simplemente El Caballero (The Knight). Es un ser sin voz, sin mente y sin voluntad, diseñado específicamente para una misión heroica y trágica.</p>
+                            <p class="fs-5 mb-4">Es una Vasija (Vessel), uno de los muchos hijos del Rey Pálido y la Dama Blanca. Fue creado en el Abismo utilizando una combinación de linaje real y el Vacío (una fuerza oscura y antigua).</p>
+                            <p class="fs-5 mb-4">Su destino original era ser un recipiente puro capaz de contener la Infección que destruía el reino de Hallownest, sellando así a la diosa Destello en su interior para siempre.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">¿Sabias que?</h2>
+                            <p class="fs-5 mb-4">Al ser una vasija hecha de vacío, el Caballero no tiene género.</p>
+                            <p class="fs-5 mb-4">Es técnicamente el hermano de Hornet, aunque ella es una hija "común" y él un ser de vacío.</p>
+                            <p class="fs-5 mb-4">El diseño original del Caballero proviene de un juego anterior de Team Cherry llamado Hungry Knight.</p>
+                            <p class="fs-5 mb-4">Hornet se refiere a él cariñosamente (o despectivamente) como "Fantasma" (Ghost) debido a su naturaleza inexpresiva y su origen en el vacío.</p>
+                            
+                        </section>
+                    </article>
+                </div>
+
+                <!-- Side widgets -->
+                <div class="col-lg-4">
+                    <!-- Image widget -->
+                    <div class="card mb-4">
+                        <div class="card-header ch">Mas sobre el personaje</div>
+                        <div class="card-body ch">
+                            <figure class="mb-4 ch"><img class="img-fluid rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrlqYcIOLmrFJn3jEzeWQtBM8zdmYAcMpeQ&s" alt="..." /></figure>
+                            Es un protagonista silencioso. Su falta de emociones no es un defecto, sino su mayor atributo, ya que se supone que esto lo hace inmune a la influencia de la Infección (que ataca los deseos y la voluntad).
+                        </div>
+                    </div>
+                    <!-- Categories widget -->
+                    <div class="card mb-4">
+                        <div class="card-header ch">Te puede interesar</div>
+                        <div class="card-body">
+                            <div class="row ch">
+                                <div class="col-sm-6 ch">
+                                    <ul class="list-unstyled mb-0 ch">
+                                        <li><a href="#!">Hornet</a></li>
+                                        <li><a href="#!">Rey Palido</a></li>
+                                        <li><a href="#!">Cornifer</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 ch">
+                                    <ul class="list-unstyled mb-0 ch">
+                                        <li><a href="#!">Zote</a></li>
+                                        <li><a href="#!">NPC's de zona</a></li>
+                                        <li><a href="#!">NPC's especiales</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget -->
+                    <div class="card mb-4 ch">
+                        <div class="card-header ch">Datos clave</div>
+                        <div class="card-body ch">Arma: Utiliza un Aguijón (Nail) civilizado, que puede ser forjado y mejorado.
+
+                        Habilidades: Su poder crece al recolectar Amuletos y absorber las habilidades de otros seres caídos (como el Caparazón de Baldur o el Manto de Alas de Monarca).
+
+                        Parentesco: Es "hermano" de las miles de sombras que vagan por el Abismo y tiene un vínculo especial con Hornet, quien es su media hermana.
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4to cambio: Personalizar el pie de página-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Todos los derechos reservados  Ivan Leon - ITI - 186333 - UPSLP - WEB 1</p></div>
+        </footer>
+    </main>   
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

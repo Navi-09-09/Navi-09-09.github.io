@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Personajes  - Cornifer</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <!-- Page content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content -->
+                <article>
+                    <!-- Post header -->
+                    <header class="mb-4">
+                        <h1 class="fw-bolder mb-1">¡Cornifer el Cartógrafo!</h1>
+                        <div class="text-muted fst-italic mb-2">"Un explorador con buen sentido de la orientación y amor por los mapas"</div>
+                        <!-- Post categories -->
+                        <a class="badge bg-success text-decoration-none link-light" href="#!">Explorador</a>
+                        <a class="badge bg-secondary text-decoration-none link-light" href="#!">Comerciante</a>
+                        <a class="badge bg-info text-decoration-none link-light" href="#!">NPC</a>
+                    </header>
+
+                    <!-- Preview image -->
+                    <figure class="mb-4">
+                        <img class="img-fluid rounded posthk shadow-lg" src="../../pictures/corniBigPost.avif" alt="Cornifer en su labor" />
+                    </figure>
+
+                    <!-- Post content -->
+                    <section class="mb-5">
+                        <div class="alert alert-info border-info bg-dark text-light mb-4" role="alert">
+                            <strong>Dato de juego:</strong> Siempre sabrás que Cornifer está cerca si escuchas su característico tarareo y sigues el rastro de papeles en el suelo.
+                        </div>
+
+                        <p class="fs-5 mb-4">Cornifer es uno de los NPCs más queridos y útiles de Hollow Knight. Es un cartógrafo entusiasta que se dedica a explorar las peligrosas ruinas de Hallownest para trazar mapas detallados de cada zona. Es el esposo de Iselda, quien dirige la tienda de mapas en Bocasucia.</p>
+                        
+                        <p class="fs-5 mb-4">A pesar de los peligros, la sed de aventura de Cornifer lo lleva a los lugares más recónditos: desde la sofocante Cumbre de Cristal hasta los húmedos Paramos Fúngicos, siempre armado con su pluma y papel.</p>
+
+                        <!-- SECCION DE IMAGEN AGREGADA -->
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/corniSenderoVerde.jpeg" alt="Mapa de Cornifer" />
+                            <figcaption class="fst-italic mt-2 text-muted">Cornifer vendiendo un mapa en el Sendero Verde</figcaption>
+                        </figure>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Arte de la Cartografía</h2>
+                        <p class="fs-5 mb-4">Cornifer no solo vende mapas, él vive por ellos. Cada vez que llegas a una zona nueva, su mapa es esencial para no perderse. Sin embargo, sus mapas suelen estar incompletos, ya que deja que el Caballero termine de explorar y completar los detalles restantes por su cuenta.</p>
+
+                        <div class="row my-4">
+                            <div class="col-md-6">
+                                <ul class="list-group shadow-sm">
+                                    <li class="list-group-item bg-dark text-white border-secondary">📍 <b>Hogar:</b> Bocasucia (Tienda de Iselda)</li>
+                                    <li class="list-group-item bg-dark text-white border-secondary">🎵 <b>Habilidad:</b> Tarareo detectable a distancia</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group shadow-sm">
+                                    <li class="list-group-item bg-dark text-white border-secondary">✍️ <b>Herramientas:</b> Tinta, papel y pluma</li>
+                                    <li class="list-group-item bg-dark text-white border-secondary">🛡️ <b>Valentía:</b> Explora zonas llenas de monstruos</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">Su Relación con Iselda</h2>
+                        <p class="fs-5 mb-4">Mientras Cornifer está en el campo de trabajo, su esposa Iselda se encarga de vender suministros cartográficos en Bocasucia. Aunque Iselda a veces se queja de lo mucho que él se ausenta, es evidente que ambos comparten un vínculo profundo basado en su negocio familiar.</p>
+                        
+                        <blockquote class="blockquote border-start border-4 border-info ps-4 my-4 fst-italic">
+                            "¡Oh! ¿Un cliente? Qué alegría encontrar a otro viajero en estos túneles. Tengo justo lo que necesitas para no perderte..."
+                        </blockquote>
+
+                        <!-- SECCION DE IMAGEN AGREGADA -->
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/iseldaPost.avif" alt="Tienda de Iselda" />
+                            <figcaption class="fst-italic mt-2 text-muted">Iselda esperando el regreso de su esposo en Bocasucia</figcaption>
+                        </figure>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Fin del Viaje</h2>
+                        <p class="fs-5 mb-4">Una vez que has comprado todos sus mapas o has avanzado lo suficiente en la historia, Cornifer finalmente se retira de la exploración para descansar en Bocasucia. Podrás encontrarlo durmiendo plácidamente en su cama, mientras su tarareo se convierte en un suave ronquido.</p>
+                    </section>
+                </article>
+            </div>
+
+            <!-- Side widgets -->
+            <div class="col-lg-4">
+                <!-- Info Card -->
+                <div class="card mb-4 shadow-sm border-success">
+                    <div class="card-header bg-success text-white">Ficha de Explorador</div>
+                    <div class="card-body ch">
+                        <table class="table table-sm mb-0">
+                            <tbody>
+                                <tr><td><strong>Oficio:</strong></td><td>Cartógrafo</td></tr>
+                                <tr><td><strong>Estado:</strong></td><td>Activo / Retirado</td></tr>
+                                <tr><td><strong>Vicio:</strong></td><td>Aventura</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Image widget -->
+                <div class="card mb-4">
+                    <div class="card-header ch">Espíritu Aventurero</div>
+                    <div class="card-body ch text-center">
+                        <figure class="mb-3 ch">
+                            <img class="img-fluid rounded border shadow-sm" src="../../pictures/corniPost.webp" alt="..." />
+                        </figure>
+                        <p class="small">Cornifer es capaz de llegar a sitios imposibles solo para dibujar el paisaje. ¡Es el guía definitivo de Hallownest!</p>
+                    </div>
+                </div>
+
+                <!-- Categories widget -->
+                <div class="card mb-4">
+                    <div class="card-header ch">Relacionados</div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Iselda (Esposa)</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Bocasucia</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Amuletos de Mapa</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Zonas del Reino</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side widget -->
+                <div class="card mb-4 ch">
+                    <div class="card-header ch fw-bold text-success">Tips de Cartografía</div>
+                    <div class="card-body ch">
+                        <div class="d-flex mb-2">
+                            <div class="badge bg-info me-2" style="height: fit-content;">?</div>
+                            <small>Si escuchas su tarareo, estás muy cerca de comprar un mapa nuevo.</small>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <div class="badge bg-info me-2" style="height: fit-content;">?</div>
+                            <small>Si no lo encuentras en una zona, dejará una nota indicando que el mapa está en la tienda de Iselda.</small>
+                        </div>
+                        <div class="d-flex">
+                            <div class="badge bg-info me-2" style="height: fit-content;">?</div>
+                            <small>Su zona favorita (según sus diálogos) parece ser los Paramos Fúngicos por sus colores.</small>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="py-5 bg-dark border-top border-secondary mt-5">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Todos los derechos reservados | Ivan Leon - ITI - 186333 - UPSLP - WEB 1</p>
+            </div>
+        </footer>
+    </main>  
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

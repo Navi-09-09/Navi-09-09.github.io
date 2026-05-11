@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Lore - Vasijas</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-1 text-light" style="letter-spacing: -4px;">Los Receptáculos</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Niños de Dios y del Vacío... creados para contener lo incontenible."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-dark border border-light text-light px-3 py-2">Prole Real</span>
+                            <span class="badge bg-secondary px-3 py-2 text-white">Seres de Vacío</span>
+                            <span class="badge bg-primary px-3 py-2">El Plan del Wyrm</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-secondary w-100" src="../../pictures/vesselsLoreBanner.jpg" style="height: 500px; object-fit: cover;" alt="El Abismo y las Vasijas" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5 text-center">Miles de cáscaras rotas en lo más profundo de Hallownest.</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-4 mb-4 text-white">El Origen: "Sin costo demasiado grande"</h2>
+                        <p class="fs-4">Los <b>Receptáculos</b> (o Vasijas) son los hijos biológicos del <b>Rey Pálido</b> y la <b>Dama Blanca</b>. Sin embargo, no fueron criados como príncipes. Antes de nacer, sus huevos fueron arrojados al <b>Abismo</b> para que el Vacío consumiera su interior, dejando solo una cáscara vacía capaz de contener la Infección de Destello sin ser corrompida por sueños o deseos.</p>
+                        
+                        <div class="p-5 bg-black border border-secondary rounded mt-4 shadow-lg">
+                            <h3 class="text-white fw-bold mb-3 text-center">El Juramento de Pureza</h3>
+                            <p class="fs-4 mb-0 text-muted fst-italic text-center">
+                                "Sin mente que piense.<br>
+                                Sin voluntad que quebrantar.<br>
+                                Sin voz que grite de sufrimiento.<br>
+                                Nacido de Dios y del Vacío."
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-info">La Elección del Wyrm</h2>
+                        <p class="fs-4 mb-4 text-light">De los miles de niños que intentaron escapar del Abismo, solo uno fue considerado lo suficientemente "puro" por el Rey Pálido. Este fue elegido para convertirse en <b>The Hollow Knight</b>.</p>
+                        
+                        <div class="row g-4 mt-2">
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-light h-100 shadow">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-white fw-bold">El Elegido</h4>
+                                        <p class="fs-6 text-light">Entrenado y criado en el Palacio Blanco para ser el sello perfecto. Su fracaso se debió a una "idea instalada": el amor y la gratitud hacia su padre.</p>
+                                        <img src="../../pictures/pureVesselPortrait.jpg" class="img-fluid rounded mt-3 border border-secondary" alt="Pure Vessel">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-light h-100 shadow">
+                                    <div class="card-body text-center">
+                                        <h4 class="text-white fw-bold">El Descarte (Nuestro Héroe)</h4>
+                                        <p class="fs-6 text-light">Nuestro personaje es una de las vasijas que cayó de nuevo al Abismo y logró escapar de Hallownest, regresando años después cuando el sello comenzó a fallar.</p>
+                                        <img src="../../pictures/theKnightPortrait.jpg" class="img-fluid rounded mt-3 border border-secondary" alt="The Knight">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-white">Anatomía de una Vasija</h2>
+                        <p class="fs-4 mb-4">Las vasijas no son insectos vivos en el sentido tradicional. Son construcciones de Vacío dentro de un molde biológico.</p>
+                        
+                        <ul class="fs-5 text-light mb-5">
+                            <li class="mb-3"><b>La Máscara:</b> No es su cara real, sino una cáscara de hueso blanca que contiene el Vacío en su interior.</li>
+                            <li class="mb-3"><b>La Capa:</b> Suele ser lo único que visten, protegiendo su cuerpo frágil pero ágil.</li>
+                            <li class="mb-3"><b>La Sombra:</b> Cuando una vasija muere y su máscara se rompe, su esencia de Vacío (la Sombra) escapa. El Caballero debe derrotar a su propia sombra para recuperar su ALMA.</li>
+                        </ul>
+
+                        <div class="p-4 bg-dark border-start border-5 border-primary rounded shadow">
+                            <h4 class="text-primary fw-bold">El Corazón del Vacío</h4>
+                            <p class="fs-5 mb-0">Al obtener este amuleto, el Caballero unifica el Vacío bajo su voluntad. En este punto, deja de ser una "vasija fallida" para convertirse en el <b>Señor de las Sombras</b>, la entidad definitiva que puede consumir a la luz.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-secondary">Vasijas Hermanas</h2>
+                        <p class="fs-4">A lo largo del juego, encontramos los restos de otras vasijas que intentaron cumplir su misión y fallaron en diferentes rincones de Hallownest:</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-12">
+                                <div class="p-4 bg-dark border border-secondary rounded shadow-sm">
+                                    <h5 class="text-white fw-bold">El Receptáculo Roto</h5>
+                                    <p class="fs-5 text-light">Ubicado en la Cuenca Antigua. Su cuerpo fue reanimado por la Infección, usándolo como un guardián para impedir que nadie llegue a las Alas de Monarca.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-dark border border-secondary rounded">
+                                    <h6 class="text-white fw-bold">Sendero Verde</h6>
+                                    <p class="small text-muted">Cerca de donde peleas con Hornet por primera vez, puedes ver el cadáver de una vasija de la cual Hornet saca información.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-dark border border-secondary rounded">
+                                    <h6 class="text-white fw-bold">Nido Profundo</h6>
+                                    <p class="small text-muted">En la guarida de Nosk, hay decenas de máscaras de vasijas colgadas, indicando que Nosk las cazó usando sus propios recuerdos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header bg-white text-dark fw-bold fs-5 text-center">Jerarquía de Vasijas</div>
+                    <div class="card-body p-0 text-white">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <strong class="text-info">El Caballero:</strong> Protagonista, portador del Corazón del Vacío.
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <strong class="text-info">The Hollow Knight:</strong> El sello original, consumido por la luz.
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <strong class="text-info">Pure Vessel:</strong> La forma perfecta en los sueños (Godhome).
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <strong class="text-info">Siblings:</strong> Sombras errantes que protegen el Abismo.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow">
+                    <div class="card-header bg-secondary text-white fw-bold fs-5">El Gran Pecado del Rey</div>
+                    <div class="card-body text-white">
+                        <p class="small">El Rey Pálido sacrificó a miles de sus propios hijos en un intento desesperado por salvar su reino. Esta decisión es lo que hace que personajes como <b>Hornet</b> (su media hermana) tengan sentimientos encontrados sobre el pasado de Hallownest.</p>
+                        <img src="../../pictures/kingAndVessel.jpg" class="img-fluid rounded mt-2 border border-light" alt="Lore King">
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold">Dato Técnico</div>
+                    <div class="card-body text-white">
+                        <p class="small"><i class="fa fa-code"></i> El diseño del Caballero fue simplificado para que fuera fácil de animar, pero su falta de expresión facial se convirtió en el punto clave de toda la narrativa del juego (la "pureza" de no tener emociones).</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-primary shadow text-center p-3">
+                    <h5 class="text-primary fw-bold">Puntos de Lore Clave</h5>
+                    <p class="small text-white">Las vasijas no tienen género. Al ser seres de vacío creados artificialmente, se les considera seres asexuales (They/Them).</p>
+                    <hr class="bg-secondary">
+                    <p class="small text-muted">¿Sabías que el nombre interno del Caballero en los archivos del juego es simplemente "Hero"?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-black border-top border-secondary mt-5 text-center">
+        <div class="container">
+            <h2 class="text-white fw-bold mb-3" style="letter-spacing: 5px;">"SOMOS VACÍO"</h2>
+            <p class="m-0 text-muted fs-5">Compendio de las Vasijas - Ivan Leon - ITI - 186333 - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

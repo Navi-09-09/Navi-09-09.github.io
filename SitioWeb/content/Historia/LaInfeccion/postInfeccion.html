@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Lore - La Infeccion</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-1 text-warning" style="letter-spacing: -3px;">La Infección</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Un sueño dulce que se convierte en una pesadilla eterna de luz naranja."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-warning text-dark px-3 py-2 shadow-sm">Plaga Onírica</span>
+                            <span class="badge bg-danger px-3 py-2 shadow-sm">Mente de Colmena</span>
+                            <span class="badge bg-dark border border-warning text-warning px-3 py-2">Destello</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-warning pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-warning w-100" src="../../pictures/infeccion.webp" style="height: 450px; object-fit: cover;" alt="La Infección en Hallownest" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5 text-center">La esencia naranja brotando de las grietas del reino.</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-4 mb-4 text-white">La Luz Olvidada</h2>
+                        <p class="fs-4">La <b>Infección</b> no es una enfermedad biológica común, sino una manifestación de la ira de <b>Destello</b> (The Radiance). Cuando el Rey Pálido llegó a Hallownest y otorgó conciencia a los insectos, estos olvidaron a su antigua deidad. Como represalia, ella comenzó a aparecer en sus sueños, susurrando y prometiendo unidad, hasta que esa luz "quemó" sus mentes desde adentro.</p>
+                        
+                        <div class="alert alert-warning bg-dark border-warning text-light p-4 mt-4 shadow-lg">
+                            <h4 class="fw-bold"><i class="fa fa-low-vision"></i> El Aroma del Destino</h4>
+                            <p class="fs-5 mb-0">Se dice que la Infección tiene un olor dulce y seductor. Los insectos se ven atraídos por este aroma en sus sueños antes de perder completamente su voluntad y convertirse en esclavos de la mente de colmena.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-warning">Síntomas y Transformación</h2>
+                        <p class="fs-4 mb-4 text-light">La Infección se manifiesta físicamente de formas aterradoras. El cuerpo del huésped ya no le pertenece, convirtiéndose en un recipiente para la luz.</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-warning rounded h-100">
+                                    <h5 class="text-warning fw-bold">Ojos Naranjas</h5>
+                                    <p class="small text-white">El primer signo visible. El iris brilla con una luz naranja intensa, indicando que la voluntad de Destello ha reemplazado a la del individuo.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-warning rounded h-100">
+                                    <h5 class="text-warning fw-bold">Protuberancias y Quistes</h5>
+                                    <p class="small text-white">En etapas avanzadas, el cuerpo se hincha con burbujas de gas naranja altamente volátil y explosivo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="fs-5 mt-4 text-light">Los insectos infectados pierden el habla, la memoria y la capacidad de sentir dolor, actuando únicamente para proteger la fuente de la luz o expandir la plaga a otros seres no infectados.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-white">La Caída de los Cruces</h2>
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <p class="fs-5">Uno de los momentos más impactantes en el juego ocurre tras derrotar a un Soñador o adquirir las Alas de Monarca. Los <b>Cruces Olvidados</b> se transforman en los <b>Cruces Infectados</b>.</p>
+                                <p class="fs-5 text-light">Los caminos se bloquean con masas de carne naranja, los enemigos explotan al morir y la atmósfera se vuelve asfixiante. Es la prueba definitiva de que los sellos del Rey están fallando y que Destello está recuperando su reino.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="../../pictures/crucesInfectados.webp" class="img-fluid rounded shadow border border-danger" alt="Cruces Infectados">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-danger">El Caso de los Traidores</h2>
+                        <p class="fs-4 mb-4">No todos los insectos fueron infectados contra su voluntad. El <b>Señor de los Traidores</b> y su tribu de mantis abrazaron la Infección voluntariamente para obtener una fuerza salvaje que sus cuerpos normales no podían alcanzar.</p>
+                        
+                        <div class="card bg-dark border-danger mb-4 shadow-lg">
+                            <div class="card-body">
+                                <h4 class="text-danger fw-bold">Reanimación de los Caídos</h4>
+                                <p class="fs-5 text-white">La Infección es tan poderosa que puede reanimar cadáveres. El <b>Receptáculo Roto</b> es el ejemplo más claro: un cuerpo vacío que es controlado como una marioneta por parásitos infectados para impedir que el Caballero avance hacia el Abismo.</p>
+                            </div>
+                        </div>
+                        
+                        <figure class="text-center">
+                            <img src="../../pictures/FporRadiance.jpg" class="img-fluid rounded shadow border border-warning w-100" style="max-height: 300px; object-fit: cover;" alt="Destello vs Vacío">
+                            <figcaption class="fst-italic mt-2 text-muted">La batalla eterna: La luz de la Infección contra la oscuridad del Vacío.</figcaption>
+                        </figure>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-warning shadow">
+                    <div class="card-header bg-warning text-dark fw-bold fs-5 text-center">Datos de la Infección</div>
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-dark text-white border-warning small">
+                                <strong class="text-warning">Fuente:</strong> Destello (The Radiance).
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-warning small">
+                                <strong class="text-warning">Transmisión:</strong> A través de los sueños y el aire.
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-warning small">
+                                <strong class="text-warning">Resistencia:</strong> Solo las Mantis (honor) y los Seres de Vacío son inmunes.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-danger shadow">
+                    <div class="card-header bg-danger text-white fw-bold fs-5">Mutaciones Letales</div>
+                    <div class="card-body text-white">
+                        <div class="mb-3">
+                            <h6 class="text-danger fw-bold">Vengamosca Infectada</h6>
+                            <p class="small">Su abdomen está tan lleno de gas que explota al contacto con el Caballero.</p>
+                        </div>
+                        <hr class="bg-secondary">
+                        <div class="mb-3">
+                            <h6 class="text-danger fw-bold">Cáscara Hinchada</h6>
+                            <p class="small">Antiguos ciudadanos cuyos cuerpos han mutado en bombas andantes.</p>
+                        </div>
+                        <div class="mb-0">
+                            <h6 class="text-danger fw-bold">Burbujas de Gas</h6>
+                            <p class="small">Obstáculos ambientales que liberan nubes tóxicas si son golpeadas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header bg-white text-dark fw-bold">El Sello de los Soñadores</div>
+                    <div class="card-body text-white text-center">
+                        <p class="small text-muted">Para frenar la Infección, el Rey Pálido tuvo que sacrificar a tres seres poderosos (Lurien, Monomon y Herrah) para sellar el Templo del Huevo Negro. Sin estos sellos, la plaga habría destruido el mundo exterior hace mucho tiempo.</p>
+                        <img src="../../pictures/sellosBreak.png" class="img-fluid mt-2" style="width: 120px;">
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-warning shadow p-3 text-center">
+                    <h5 class="text-warning fw-bold">¿Sabías que?</h5>
+                    <p class="small text-white">El amuleto <b>Útero Infectado</b> utiliza tu propia ALMA para generar crías de mosca que están, irónicamente, imbuidas de una pequeña parte de esta energía naranja para atacar a otros enemigos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="py-5 bg-dark border-top border-warning mt-5 text-center">
+            <div class="container text-white">
+                <h2 class="fw-bold mb-3" style="color: #ff9f43;">"NO ACEPTES SUEÑOS"</h2>
+                <p class="m-0 fs-5">Análisis de la Infección - Ivan Leon - ITI - UPSLP</p>
+                <p class="text-muted small">Programación Web I - 2026</p>
+            </div>
+        </footer>
+    </main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

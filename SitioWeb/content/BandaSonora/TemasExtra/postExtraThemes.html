@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Banda Sonora - Temas Extra</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-2 text-success" style="letter-spacing: -3px;">Temas Atmosféricos</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"La música que respira junto a las paredes de Hallownest."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-success px-3 py-2 shadow-sm">Ambiente</span>
+                            <span class="badge bg-dark border border-success text-success px-3 py-2 shadow-sm">Inmersión</span>
+                            <span class="badge bg-info text-dark px-3 py-2 shadow-sm">Christopher Larkin</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-success pb-5 text-center text-md-start">
+                        <p class="fs-4">Más allá de los combates contra dioses y caballeros, la mayor parte de nuestra estancia en Hallownest transcurre en el silencio de sus pasillos. Christopher Larkin diseñó estos temas para que no fueran intrusivos, sino que **evolucionaran con el entorno**. Muchos de estos tracks añaden o quitan instrumentos dependiendo de qué tan profundo te encuentres en una zona.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-success mb-4">Greenpath (Sendero Verde)</h2>
+                        <p class="fs-4 mb-4 text-light">Es el primer gran cambio tonal del juego. Venimos del gris y el silencio de los Cruces, y de pronto nos recibe una explosión de vida. El chelo y los violines aquí son ligeros y fluidos, imitando el movimiento de las hojas y el agua ácida. Es un tema que transmite **curiosidad y maravilla**.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-success mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/E1CVSjd-Yz0?si=pCKx--V1uAYSU1qS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="small text-muted text-center">"La voz de la naturaleza retomando las ruinas del Rey."</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-warning text-end">Fungal Wastes (Páramos Fúngicos)</h2>
+                        <p class="fs-4 text-end text-light">Rítmico, juguetón y un poco extraño. Larkin utiliza percusiones que suenan como rebotes, reflejando perfectamente la mecánica de salto sobre los hongos. Es un tema que se siente "vivo", como si la música misma estuviera pulsando con las esporas del aire.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-warning mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fhUqu-g0pVY?si=K99aT9nAVS_nzraR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-info">Crystal Peak (Cumbre de Cristal)</h2>
+                        <p class="fs-4 mb-4 text-light">Esta pieza es una maravilla técnica. Utiliza sonidos metálicos y cristalinos que resuenan como si vinieran de las paredes de la mina. Transmite una sensación de **frío industrial** y aislamiento, recordándote que estás en un lugar de trabajo eterno donde ya no queda nadie vivo.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-info mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DWKKsB0rD40?si=ogDcuDPWowoVlx3H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-danger text-end">Dung Defender</h2>
+                        <p class="fs-4 text-end text-light">A diferencia de los otros jefes, Ogrim (el Defensor del Estiércol) tiene un tema lleno de **heroísmo y alegría**. Es una marcha militar vibrante que nos recuerda su pasado como un Gran Caballero. Es imposible no sonreír mientras escuchas los bronces de esta canción.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-danger mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lkgHqBl12Cg?si=Zxu5IBjkV-CVw7hX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-light">White Palace (Palacio Blanco)</h2>
+                        <p class="fs-4 mb-4 text-light">Regal, divino y opresivo. El uso de sintetizadores brillantes y un piano estricto crea una atmósfera de "luz artificial". Es un tema que te acompaña mientras sufres en las plataformas, recordándote constantemente la **perfección fría** del Rey Pálido.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-light mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4JWANCA-Pbw?si=XdhewTbbN9cBmQ3S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-success shadow">
+                    <div class="card-header bg-success text-white fw-bold fs-5 text-center">El Corazón del Sonido</div>
+                    <div class="card-body text-white">
+                        <p class="small">Muchos de estos temas ambientales fueron grabados con un **solo instrumento acústico** (como una flauta o un chelo) y luego procesados digitalmente para que sonaran como si estuvieran en una cueva masiva.</p>
+                        <div class="p-2 bg-black rounded border border-success text-center">
+                            <small class="text-success">Técnica: Reverb Convolutiva</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5">Música Dinámica</div>
+                    <div class="card-body text-white">
+                        <p class="small">¿Sabías que en Greenpath la música añade una capa de **voces etéreas** solo cuando estás cerca de las áreas con agua? Christopher Larkin programó estas variaciones para que la exploración nunca se sintiera monótona.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow text-white">
+                    <div class="card-header bg-secondary text-white fw-bold">Temas Ocultos</div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush bg-dark small">
+                            <li class="list-group-item bg-dark text-white border-secondary">Reflection (Bancos)</li>
+                            <li class="list-group-item bg-dark text-white border-secondary">Enter Hallownest</li>
+                            <li class="list-group-item bg-dark text-white border-secondary">The White Lady</li>
+                            <li class="list-group-item bg-dark text-white border-secondary">The Hive</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-primary shadow text-center p-3">
+                    <h5 class="text-primary fw-bold">Análisis de Usuario</h5>
+                    <p class="small text-muted">Desde el punto de vista de diseño de experiencia (UX), la música ambiental en Hollow Knight sirve como un **indicador de zona**. El usuario asocia un estilo musical con una dificultad y un tipo de enemigos antes de verlos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-success mt-5 text-center text-white">
+        <div class="container">
+            <h4 class="text-success fw-bold mb-3">"LOS SONIDOS QUE DEFINEN UN REINO"</h4>
+            <p class="m-0 fs-5">Temas de Ambiente - Ivan Leon - ITI - 186333 - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

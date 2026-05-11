@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Lore - Historias Ocultas</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-1" style="color: #a55eea; letter-spacing: -4px;">Historias Ocultas</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Los fragmentos de verdad que el Rey Pálido intentó borrar de la historia."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-dark border border-purple text-purple px-3 py-2" style="color: #a55eea; border-color: #a55eea !important;">Secretos de Estado</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">Ecos del Pasado</span>
+                            <span class="badge bg-danger px-3 py-2">Lore Prohibido</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-dark w-100" src="../../pictures/hiddenLoreBanner.jpg" style="height: 500px; object-fit: cover;" alt="Misterios de Hallownest" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5">Las tablillas de lore ocultas revelan una verdad mucho más oscura.</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-4 mb-4 text-white">Lo que no te cuentan</h2>
+                        <p class="fs-4">Hallownest es un reino de fachadas. Debajo de la promesa de "eternidad" del Rey Pálido, yacen las cenizas de civilizaciones olvidadas, experimentos fallidos y sacrificios que rozan la crueldad. En esta sección exploramos los hilos narrativos más profundos que solo los buscadores de la verdad logran desenterrar.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-info">El Destino de los Cinco Grandes Caballeros</h2>
+                        <p class="fs-5 mb-4 text-light">Eran los protectores más poderosos del Rey, pero sus finales fueron trágicos y, en algunos casos, grotescos:</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-info rounded h-100 shadow">
+                                    <h5 class="text-info fw-bold">Isma y Dryya</h5>
+                                    <p class="small text-white">Isma se fusionó con la naturaleza en su arboleda (donde obtenemos su lágrima), mientras que Dryya murió defendiendo la puerta de la Dama Blanca de una horda de mantis traidoras.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-info rounded h-100 shadow">
+                                    <h5 class="text-info fw-bold">Hegemol y Ze'mer</h5>
+                                    <p class="small text-white">Hegemol fue asesinado mientras dormía por el gusano que hoy es el Falso Caballero. Ze'mer (La Doliente Gris) se exilió tras la muerte de su amante, una mantis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fs-5 mt-4 text-muted">Solo <b>Ogrim</b> (El Defensor del Estiércol) sobrevive, viviendo en la inmundicia por lealtad a un reino que ya no existe.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4" style="color: #ff9f43;">La Civilización del Vacío</h2>
+                        <p class="fs-4 mb-4">Antes del Rey Pálido, antes de las polillas, existió una civilización que adoraba al Vacío. Sus rastros se encuentran en las estatuas masivas del Abismo y en los <b>Huevos Arcanos</b>.</p>
+                        
+                        <div class="alert alert-dark bg-black border border-warning p-4 shadow-lg">
+                            <h4 class="text-warning">El Registro de los Huevos Arcanos</h4>
+                            <p class="fs-5 mb-0">Al entregar estos objetos a Lemm, él menciona que contienen registros de una era donde los insectos no tenían mente propia, sino que eran una extensión de la voluntad del Vacío. El Rey Pálido no "creó" el Vacío, simplemente lo encontró y trató de usarlo.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-danger">El Fallo de la Pureza</h2>
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <p class="fs-5">¿Por qué falló el Hollow Knight? El lore oculto sugiere que no fue por falta de Vacío, sino por un momento de debilidad del Rey. En un breve diálogo, se menciona que el Receptáculo desarrolló una <b>"Idea Instalada"</b>.</p>
+                                <p class="fs-6 text-white border-start border-3 border-danger ps-3 fst-italic">
+                                    "Demasiado tarde descubrió que el vínculo entre padre e hijo era una impureza que Destello podía explotar."
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../../pictures/vesselMemory.jpg" class="img-fluid rounded border border-danger shadow" alt="Memoria Oculta">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-success">Más allá de Hallownest</h2>
+                        <p class="fs-4 mb-4">Hallownest es solo un pequeño punto en un mundo inmenso. Personajes como <b>Mister Mushroom</b> y los textos de los <b>Acantilados Aulladores</b> confirman la existencia de otros reinos.</p>
+                        
+                        <div class="card bg-dark border-success mb-4 shadow-lg">
+                            <div class="card-body">
+                                <h4 class="text-success fw-bold">El Final Secreto</h4>
+                                <p class="fs-5 text-white">Al completar la misión de Mister Mushroom, vemos cómo él sale volando hacia el cielo tras la muerte de Destello. Esto sugiere que él es un observador de eras, viajando de reino en reino mientras estos caen, esperando el siguiente ciclo de civilización.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-info fw-bold">La Flor Delicada</h4>
+                                <p class="fs-5">Este objeto no pertenece a Hallownest. Viene de las "tierras de los dioses" exteriores. Su poder es tan puro que es la única sustancia capaz de <b>destruir el Vacío</b> por completo, como se ve en el final secreto de Godmaster.</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-warning shadow">
+                    <div class="card-header bg-warning text-dark fw-bold fs-5 text-center">Notas del Cazador</div>
+                    <div class="card-body">
+                        <p class="small text-white">Si completas el diario, el Cazador te revela su rostro. Sus notas sugieren que él es un superviviente de una era de depredadores donde no existía la ley, solo el hambre.</p>
+                        <hr class="bg-secondary">
+                        <p class="small text-muted fst-italic">"Incluso los dioses sangran si el aguijón es lo suficientemente afilado."</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5">¿Es ético usar el Aguijón?</div>
+                    <div class="card-body text-white">
+                        <p class="small">Muchos jugadores usan el Aguijón Onírico en los fantasmas del <b>Claro de los Espíritus</b>. Al hacerlo, obtienes 1 de esencia, pero el lore implica que estás <b>borrando su alma para siempre</b> de la existencia.</p>
+                        <img src="../../pictures/marissaGhost.jpg" class="img-fluid rounded border border-info mt-2" alt="Marissa Ghost">
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow text-white">
+                    <div class="card-header bg-light text-dark fw-bold text-center">La Anatomía del Rey</div>
+                    <div class="card-body">
+                        <p class="small">El cadáver gigante en el <b>Límite del Reino</b> no es un escenario, es el cuerpo original del Rey. Los Wyrms se mudan de piel para renacer. Su forma de insecto es solo una "cáscara" para poder caminar entre sus súbditos.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-danger shadow text-center p-3">
+                    <h5 class="text-danger fw-bold">El Golem de Carne</h5>
+                    <p class="small text-white">En el Templo del Huevo Negro, hay grabados que sugieren que el Rey Pálido y los Soñadores no solo sellaron a Destello, sino que alimentaron el sello con las almas de los ciudadanos de Hallownest para mantenerlo fuerte.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-warning mt-5 text-center">
+        <div class="container">
+            <h2 class="text-warning fw-bold mb-3" style="letter-spacing: 5px;">"BUSCA LA VERDAD, ACEPTA EL VACÍO"</h2>
+            <p class="m-0 text-white fs-5">Cosas Ocultas del Lore - Ivan Leon - ITI - 186333 - UPSLP</p>
+            <p class="text-muted small">Programación Web I - Examen Final - 2026</p>
+        </div>
+    </footer>
+</main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

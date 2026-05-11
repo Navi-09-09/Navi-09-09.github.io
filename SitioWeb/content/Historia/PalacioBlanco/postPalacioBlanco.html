@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Lore - Palacio Blanco</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5 text-center text-md-start">
+                        <h1 class="fw-bolder mb-1 display-1 text-light" style="letter-spacing: -3px; text-shadow: 0 0 15px rgba(255,255,255,0.3);">Palacio Blanco</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Un monumento a la eternidad, oculto en el suspiro de un sueño."</div>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+                            <span class="badge bg-light text-dark px-3 py-2">Reino de los Sueños</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">Desafío de Plataformas</span>
+                            <span class="badge bg-dark border border-light text-light px-3 py-2">El Trono del Rey</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-light pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-light w-100" src="../../pictures/palacioBlanco.png" style="height: 500px; object-fit: cover;" alt="El Palacio Blanco" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5 text-center">La resplandeciente residencia del Rey Pálido, preservada fuera del tiempo.</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-4 mb-4 text-white">El Escondite del Wyrm</h2>
+                        <p class="fs-4">El <b>Palacio Blanco</b> fue una vez el centro físico de Hallownest, ubicado en la Cuenca Antigua. Sin embargo, tras la caída del reino, el Rey Pálido lo desvaneció de la realidad física, ocultándolo dentro de la mente de uno de sus sirvientes muertos. Para acceder a él, el Caballero debe poseer el <b>Aguijón Onírico Despertado</b> (1800 de esencia) y golpear el cadáver de un <b>Moldura Real</b> (Kingsmould).</p>
+                        
+                        <div class="alert alert-light bg-dark border-light text-light p-4 mt-4 shadow-lg">
+                            <h4 class="fw-bold text-white"><i class="fa fa-key"></i> El Requisito de la Esencia</h4>
+                            <p class="fs-5 mb-0">Solo aquellos que han recolectado suficiente esencia pueden romper el sello que protege la memoria del Palacio. Es una prueba de voluntad antes de enfrentar el juicio final.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-warning">Arquitectura de Castigo</h2>
+                        <p class="fs-4 mb-4 text-light">A diferencia de la mayoría de las áreas de Hallownest, el Palacio Blanco no se enfoca en el combate de enemigos, sino en la precisión del movimiento. El palacio está repleto de sierras circulares, pinchos retráctiles y espinos brillantes.</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-light rounded h-100 shadow">
+                                    <h5 class="text-white fw-bold">Defensas Automatizadas</h5>
+                                    <p class="small text-muted">Las sierras circulares son el elemento más icónico (y odiado) del Palacio. Representan la obsesión del Rey por la seguridad y la perfección, convirtiendo su hogar en una trampa mortal para cualquier intruso.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-light rounded h-100 shadow">
+                                    <h5 class="text-white fw-bold">Los Molduras Alados</h5>
+                                    <p class="small text-muted">Criaturas de vacío y porcelana que sirven como plataformas móviles. Son esenciales para navegar por los vastos salones del palacio donde no hay suelo firme.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <div class="row align-items-center bg-gradient p-4 rounded" style="background: rgba(255, 255, 255, 0.05);">
+                            <div class="col-md-7">
+                                <h2 class="fw-bolder display-5 mb-4 text-danger">El Sendero del Dolor</h2>
+                                <p class="fs-5 text-light">Oculto tras una pared rompible, se encuentra el desafío de plataformas más extremo de todo el juego. El <b>Sendero del Dolor</b> es un área opcional que pone a prueba la maestría absoluta del jugador con el dash, el doble salto y el pogo.</p>
+                                <p class="fs-6 text-white border-start border-3 border-danger ps-3 fst-italic">
+                                    "Para ver el recuerdo oculto, uno debe sufrir el camino más largo."
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="../../pictures/pathOfPain.jpg" class="img-fluid rounded shadow-lg border border-danger" alt="Path of Pain">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-white">El Trono Vacío</h2>
+                        <p class="fs-4 mb-4">Al final del recorrido, el Caballero llega a la cámara real. Allí, encuentra el cadáver del <b>Rey Pálido</b> sentado en su trono, rodeado de una luz blanca perpetua. Al golpear el cuerpo, se obtiene la mitad del amuleto <b>Alma de Rey</b>.</p>
+                        
+                        <div class="card bg-dark border-light mb-4 shadow-lg">
+                            <div class="card-body">
+                                <h4 class="text-warning fw-bold text-center">Revelación de Lore</h4>
+                                <p class="fs-5 text-white text-center">En la cima del palacio, el Caballero puede ver una breve visión del Rey con el Receptáculo Puro, confirmando que el Rey sentía afecto por su creación, lo que finalmente causó la impureza del sello y la caída de Hallownest.</p>
+                            </div>
+                        </div>
+                        
+                        <figure class="text-center">
+                            <img src="../../pictures/reyPalidoPostSmall.jpg" class="img-fluid rounded shadow border border-light w-100" style="max-height: 400px; object-fit: cover;" alt="El Trono del Rey">
+                            <figcaption class="fst-italic mt-2 text-muted fs-6">El silencio eterno del monarca que intentó desafiar al destino.</figcaption>
+                        </figure>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header bg-light text-dark fw-bold fs-5 text-center">Guía de Acceso</div>
+                    <div class="card-body text-white">
+                        <ul class="list-unstyled fs-6">
+                            <li class="mb-3 border-bottom border-secondary pb-2">
+                                <strong class="text-warning">1. Esencia:</strong> Necesitas 1800 puntos de esencia.
+                            </li>
+                            <li class="mb-3 border-bottom border-secondary pb-2">
+                                <strong class="text-warning">2. Vidente:</strong> Habla con ella para despertar el aguijón.
+                            </li>
+                            <li class="mb-0">
+                                <strong class="text-warning">3. Ubicación:</strong> Ve a la Cuenca Antigua, a la derecha de la estación del ciervo.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-warning shadow">
+                    <div class="card-header bg-warning text-dark fw-bold fs-5">Build para el Palacio</div>
+                    <div class="card-body text-white">
+                        <p class="small text-muted mb-3">Dado que morirás mucho por las sierras, esta build te hace casi inmortal:</p>
+                        <div class="mb-3 d-flex align-items-center">
+                            <img src="../../pictures/sangreColmenas.webp" style="width: 40px;" class="me-3" alt="Sangre de Colmena">
+                            <div>
+                                <h6 class="mb-0 text-warning">Sangre de Colmena</h6>
+                                <small>Regenera tu última máscara perdida automáticamente.</small>
+                            </div>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center">
+                            <img src="../../pictures/cancionLarvas.webp" style="width: 40px;" class="me-3" alt="Canción de Larvas">
+                            <div>
+                                <h6 class="mb-0 text-warning">Canción de Larvas</h6>
+                                <small>Gana ALMA cada vez que recibes daño para poder curarte.</small>
+                            </div>
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                            <img src="../../pictures/concentracionProfunda.webp" style="width: 40px;" class="me-3" alt="Concentración Profunda">
+                            <div>
+                                <h6 class="mb-0 text-warning">Concentración Profunda</h6>
+                                <small>Cura dos máscaras por el mismo coste de ALMA.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow">
+                    <div class="card-header bg-secondary text-white fw-bold">Los Guardianes</div>
+                    <div class="card-body text-white p-0">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <b>Kingsmould (Moldura Real):</b> Armaduras de vacío que vigilan las entradas. Son muy resistentes.
+                            </li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">
+                                <b>Wingmould:</b> Criaturas pasivas que sirven para rebotar con el aguijón.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-black border-light shadow text-center p-3">
+                    <h6 class="text-white fw-bold">El Fragmento Blanco</h6>
+                    <p class="small text-muted fst-italic">"Fragmento de un amuleto que contiene el alma de un Rey. Genera ALMA continuamente."</p>
+                    <img src="../../pictures/fragmentoBlanco.jpg" class="img-fluid mx-auto mt-2" style="width: 60px;" alt="Kingsoul">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-light mt-5 text-center">
+        <div class="container text-white">
+            <h2 class="fw-bold mb-3" style="letter-spacing: 3px; text-shadow: 0 0 10px white;">"HALLOWNEST DURA POR SIEMPRE Y POR TODOS LOS PAPUS"</h2>
+            <p class="m-0 fs-5">La GRASA 2026 - Ivan Leon - ITI - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

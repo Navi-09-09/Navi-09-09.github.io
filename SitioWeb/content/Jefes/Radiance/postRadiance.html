@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Jefes - Radiance</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-4">
+                        <h1 class="fw-bolder mb-1">Destello: La Luz Primordial</h1>
+                        <div class="text-muted fst-italic mb-2">"La luz que brilla más allá de los sueños... y la plaga que consumió un reino."</div>
+                        <a class="badge bg-warning text-dark text-decoration-none" href="#!">Jefe Final Oculto</a>
+                        <a class="badge bg-light text-dark border text-decoration-none" href="#!">Diosa</a>
+                        <a class="badge bg-danger text-decoration-none link-light" href="#!">Origen de la Plaga</a>
+                    </header>
+
+                    <figure class="mb-4 text-center">
+                        <img class="img-fluid rounded posthk shadow-lg border border-warning" src="../../pictures/RadianceBig.webp" alt="Destello en el mundo de los sueños" />
+                        <figcaption class="fst-italic mt-2 text-muted">Destello manifestándose en el corazón de los sueños de Hallownest</figcaption>
+                    </figure>
+
+                    <section class="mb-5">
+                        <div class="alert alert-warning border-warning bg-dark text-light mb-4" role="alert">
+                            <strong>Cómo encontrarla:</strong> Debes poseer el amuleto <b>Corazón del Vacío</b>. Durante la fase final de la pelea contra El Receptáculo, cuando Hornet lo inmovilice, usa el <b>Aguijón Onírico</b> sobre él para entrar en su mente.
+                        </div>
+
+                        <p class="fs-5 mb-4"><b>Destello</b> es la antigua deidad de Hallownest, una polilla de luz pura que gobernaba la mente colectiva de los bichos antes de la llegada del Rey Pálido. Al ser olvidada, su ira se manifestó como la Infección, una plaga que priva a los habitantes de su voluntad y los convierte en cascarones violentos.</p>
+                        
+                        <p class="fs-5 mb-4">A diferencia de cualquier otro jefe en el juego, Destello no lucha en el mundo físico. La batalla tiene lugar en un plano onírico superior, rodeado de nubes doradas y una luz que llena toda la pantalla, simbolizando su poder absoluto sobre los sueños.</p>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">Un Combate de 5 Fases</h2>
+                        <p class="fs-5 mb-4">Esta es, sin duda, una de las pruebas de resistencia y reflejos más duras de Hallownest. La batalla se divide en etapas muy marcadas:</p>
+
+                        <div class="row my-4">
+                            <div class="col-md-4">
+                                <div class="p-3 border border-warning rounded bg-dark mb-3 text-center h-100">
+                                    <h6 class="text-warning">Fase 1-3: Estática</h6>
+                                    <p class="small text-white">Lluvia de espadas, ráfagas de láseres y paredes de luz. Debes aprender el ritmo de sus ataques circulares.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border border-warning rounded bg-dark mb-3 text-center h-100">
+                                    <h6 class="text-warning">Fase 4: Plataformas</h6>
+                                    <p class="small text-white">El suelo desaparece. La pelea se traslada a pequeñas plataformas flotantes donde el movimiento es limitado.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border border-warning rounded bg-dark mb-3 text-center h-100">
+                                    <h6 class="text-warning">Fase 5: El Ascenso</h6>
+                                    <p class="small text-white">Debes subir por plataformas mientras ella te dispara láseres desde arriba. Un solo error aquí te devuelve a la fase anterior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Poder del Vacío</h2>
+                        <p class="fs-5 mb-4">Para derrotar a la luz, el Caballero debe invocar la oscuridad. En el clímax de la batalla, el Vacío mismo asciende para arrastrar a Destello a las profundidades. Es el único momento donde la deidad muestra miedo antes de ser consumida por la unión de todos los hermanos del Caballero.</p>
+
+                        <blockquote class="blockquote border-start border-4 border-warning ps-4 my-4 fst-italic text-light">
+                            "Antigua enemiga... la luz que nos cegó. Ahora el Vacío te reclama."
+                        </blockquote>
+
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/FporRadiance.jpg" alt="Final de Destello" />
+                            <figcaption class="fst-italic mt-2 text-muted">El Caballero uniendo el poder del Vacío para derrotar a la Luz</figcaption>
+                        </figure>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 shadow-sm border-warning">
+                    <div class="card-header bg-warning text-dark fw-bold">Ficha Divina</div>
+                    <div class="card-body ch">
+                        <table class="table table-sm mb-0">
+                            <tbody>
+                                <tr><td><strong>Clase:</strong></td><td>Deidad Superior</td></tr>
+                                <tr><td><strong>Esencia:</strong></td><td>Luz Pura</td></tr>
+                                <tr><td><strong>Salud:</strong></td><td>1700 puntos</td></tr>
+                                <tr><td><strong>Dificultad:</strong></td><td>Máxima (Final)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header ch fw-bold">Absolute Radiance</div>
+                    <div class="card-body ch text-center">
+                        <figure class="mb-3 ch">
+                            <img class="img-fluid rounded border shadow-sm" src="../../pictures/absoluteRadiance.webp" alt="Destello Absoluto" />
+                        </figure>
+                        <p class="small">Para los jugadores más expertos, el DLC <i>Godmaster</i> presenta a <b>Destello Absoluto</b>, una versión mucho más rápida y letal al final del Panteón de Hallownest.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 ch border-warning">
+                    <div class="card-header ch fw-bold text-warning bg-dark">Estrategia Maestra</div>
+                    <div class="card-body ch">
+                        <div class="d-flex mb-3">
+                            <div class="badge bg-warning text-dark me-2" style="height: fit-content;">★</div>
+                            <small><b>Chillar al Abismo:</b> Es el hechizo más fuerte. Úsalo debajo de ella para causarle un daño masivo con los gritos del Vacío.</small>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="badge bg-warning text-dark me-2" style="height: fit-content;">★</div>
+                            <small><b>Piedra de Chamán:</b> Imprescindible para que tus hechizos cubran más área y peguen más fuerte.</small>
+                        </div>
+                        <div class="d-flex">
+                            <div class="badge bg-warning text-dark me-2" style="height: fit-content;">★</div>
+                            <small>En la fase de plataformas, quédate en el centro y espera a que ella se teletransporte hacia ti en lugar de perseguirla.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header ch fw-bold text-dark">Lore Relacionado</div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">La Tribu de las Polillas</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">El Rey Pálido</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">El Corazón del Vacío</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Finales del Juego</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="py-5 bg-dark border-top border-secondary mt-5">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Todos los derechos reservados | Ivan Leon - ITI - 186333 - UPSLP - WEB 1</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

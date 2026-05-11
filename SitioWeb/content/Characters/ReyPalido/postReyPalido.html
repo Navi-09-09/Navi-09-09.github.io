@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Personajes  - Rey Palido</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <!-- Page content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Post content -->
+                <article>
+                    <!-- Post header -->
+                    <header class="mb-4">
+                        <h1 class="fw-bolder mb-1">¡Rey Pálido!</h1>
+                        <div class="text-muted fst-italic mb-2">"El Faro de Hallownest y el Wyrm que se convirtió en Rey"</div>
+                        <a class="badge bg-light text-dark text-decoration-none" href="#!">Ser Superior</a>
+                        <a class="badge bg-primary text-decoration-none link-light" href="#!">Monarca</a>
+                        <a class="badge bg-info text-decoration-none link-light" href="#!">Wyrm</a>
+                    </header>
+
+                    <!-- Preview image -->
+                    <figure class="mb-4">
+                        <img class="img-fluid rounded posthk shadow-lg" src="../../pictures/reyPalidoPostBig.jpg" alt="El Rey Pálido" />
+                    </figure>
+
+                    <!-- Post content -->
+                    <section class="mb-5">
+                        <div class="alert alert-secondary border-light bg-dark text-light mb-4" role="alert">
+                            <strong>Nota del Lore:</strong> El Rey Pálido no solo gobernaba, él otorgó la "conciencia" a los insectos, separándolos de sus instintos salvajes.
+                        </div>
+
+                        <p class="fs-5 mb-4">El Rey Pálido es el antiguo monarca y fundador del reino de Hallownest. Es un <b>Ser Superior</b> que llegó al reino en su forma original de Wyrm y se metamorfoseó en un insecto pequeño para otorgar inteligencia a los habitantes de las cavernas a cambio de su lealtad.</p>
+                        
+                        <p class="fs-5 mb-4">Originalmente era un Wyrm que murió en los límites del reino (Borde del Reino). De su cáscara desechada nació su forma actual, cuya luz expandió las mentes de los insectos, lo que provocó que olvidaran al Destello (Radiance), la antigua deidad solar que gobernaba antes de su llegada.</p>
+
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/cascaWyrm.webp" alt="Cascaron de Wyrm" />
+                            <figcaption class="fst-italic mt-2 text-muted">Restos del Wyrm en el Borde del Reino</figcaption>
+                        </figure>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">La Fundación de una Civilización</h2>
+                        <p class="fs-5 mb-4">Junto a la <b>Dama Blanca</b>, estableció una civilización próspera, construyendo infraestructuras legendarias como la Ciudad de las Lágrimas, los Canales Reales y el Palacio Blanco. Su reinado se basaba en la promesa de un reino eterno, libre de los instintos salvajes que la Radiance controlaba a través de los sueños.</p>
+
+                        <div class="row my-4">
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-dark text-white border-secondary">🏛️ <b>Capital:</b> Ciudad de las Lágrimas</li>
+                                    <li class="list-group-item bg-dark text-white border-secondary">⚔️ <b>Guardia:</b> Los Cinco Caballeros Reales</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item bg-dark text-white border-secondary">💍 <b>Consorte:</b> La Dama Blanca</li>
+                                    <li class="list-group-item bg-dark text-white border-secondary">✨ <b>Poder:</b> Luz Mental / Clarividencia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Plan de las Vasijas</h2>
+                        <p class="fs-5 mb-4">Para detener la Infección que regresó a través de los sueños, el Rey Pálido llevó a cabo experimentos con el <b>Vacío</b> en el Abismo para crear "Vasijas": seres sin mente ni voluntad capaces de sellar al Destello de manera definitiva.</p>
+                        
+                        <blockquote class="blockquote border-start border-4 ps-4 my-4 fst-italic">
+                            "Ningún sacrificio es demasiado grande. Sin mente que piense. Sin voluntad que quebrantar. Sin voz para gritar de sufrimiento."
+                        </blockquote>
+
+                        <p class="fs-5 mb-4">Este mantra define su desesperación por salvar su creación, sacrificando a miles de sus propios hijos (las vasijas) en el proceso de búsqueda del receptáculo perfecto.</p>
+
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/vasijasVacio.jpg" alt="El Abismo" />
+                            <figcaption class="fst-italic mt-2 text-muted">Las miles de vasijas descartadas en el fondo del Abismo</figcaption>
+                        </figure>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Exilio al Sueño</h2>
+                        <p class="fs-5 mb-4">Al colapsar el reino y darse cuenta de que el sello del Hollow Knight era imperfecto, el Rey Pálido desapareció. Se refugió en el <b>Palacio Blanco</b>, el cual trasladó íntegramente al Reino de los Sueños, custodiado por un Guardián Real fallecido para evitar que cualquier rastro de la Infección lo alcanzara.</p>
+                    </section>
+                </article>
+            </div>
+
+            <!-- Side widgets -->
+            <div class="col-lg-4">
+                <!-- Info Card -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header bg-primary text-white">Ficha Técnica</div>
+                    <div class="card-body ch">
+                        <table class="table table-sm mb-0">
+                            <tbody>
+                                <tr><td><strong>Especie:</strong></td><td>Wyrm / Ser Superior</td></tr>
+                                <tr><td><strong>Estado:</strong></td><td>Fallecido</td></tr>
+                                <tr><td><strong>Ubicación:</strong></td><td>Palacio Blanco</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Image widget -->
+                <div class="card mb-4">
+                    <div class="card-header ch">Esencia del Monarca</div>
+                    <div class="card-body ch text-center">
+                        <figure class="mb-3 ch">
+                            <img class="img-fluid rounded border shadow-sm" src="../../pictures/reyPalidoPostSmall.jpg" alt="..." />
+                        </figure>
+                        <p class="small">A diferencia del Caballero, el Rey Pálido poseía una voluntad inmensa. Su luz permitía a los insectos razonar y crear cultura.</p>
+                    </div>
+                </div>
+
+                <!-- Categories widget -->
+                <div class="card mb-4">
+                    <div class="card-header ch">Explora más Lore</div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Hornet (Su hija)</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">La Dama Blanca</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Los 5 Caballeros</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">El Palacio Blanco</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">El Vacío</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side widget -->
+                <div class="card mb-4 ch">
+                    <div class="card-header ch fw-bold">Curiosidades</div>
+                    <div class="card-body ch">
+                        <div class="d-flex mb-2">
+                            <div class="badge bg-warning me-2" style="height: fit-content;">!</div>
+                            <small>Tenía la habilidad de ver el futuro, lo que lo llevó a intentar prevenir la Infección.</small>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <div class="badge bg-warning me-2" style="height: fit-content;">!</div>
+                            <small>Su trono en el Palacio Blanco es uno de los lugares más difíciles de alcanzar.</small>
+                        </div>
+                        <div class="d-flex">
+                            <div class="badge bg-warning me-2" style="height: fit-content;">!</div>
+                            <small>Hizo un trato con Herrah para obtener un Soñador, resultando en el nacimiento de Hornet.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <footer class="py-5 bg-dark border-top border-secondary mt-5">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Todos los derechos reservados | Ivan Leon - ITI - 186333 - UPSLP - WEB 1</p>
+            </div>
+        </footer>
+    </main> 
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

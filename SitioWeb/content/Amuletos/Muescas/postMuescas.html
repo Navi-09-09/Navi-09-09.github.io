@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Amuletos - Muescas</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-2 text-info">Muescas de Amuletos</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Tu mente solo puede soportar una cantidad limitada de deseos a la vez."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary px-3 py-2">Capacidad</span>
+                            <span class="badge bg-info text-dark px-3 py-2">Progreso</span>
+                            <span class="badge bg-secondary px-3 py-2">Coleccionables</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-info pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-info w-100" src="../../pictures/muescas.jpg" style="height: 400px; object-fit: cover;" alt="Muescas de Amuletos" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5">Las muescas determinan cuántos amuletos puedes equipar simultáneamente</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-5 mb-4 text-white">¿Qué son las Muescas?</h2>
+                        <p class="fs-4">Las <b>Muescas</b> son ranuras de memoria en el inventario del Caballero. Cada amuleto en Hallownest tiene un costo específico de muescas (desde 1 hasta 4). Al inicio del juego, solo posees <b>3 muescas</b>, lo que limita enormemente tus opciones de combate. Expandir esta capacidad es fundamental para poder realizar las combinaciones de amuletos más poderosas.</p>
+                        
+                        <div class="alert alert-info bg-dark border-info text-light p-4 mt-4 shadow">
+                            <h4 class="fw-bold">Capacidad Máxima</h4>
+                            <p class="fs-5 mb-0">En total, puedes obtener hasta <b>8 muescas adicionales</b> para alcanzar un máximo de <b>11 muescas permanentes</b> (sin contar la mecánica de sobrecarga).</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-4 mb-5 text-primary text-center">Ubicación de Todas las Muescas</h2>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-12">
+                                <div class="card bg-dark border-primary shadow mb-4">
+                                    <div class="card-header bg-primary text-white fw-bold fs-4">La Tienda de Salubra (4 Muescas)</div>
+                                    <div class="card-body">
+                                        <p class="fs-5 text-light">Salubra, en los Cruces Olvidados, vende muescas a medida que coleccionas amuletos:</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-dark table-sm mb-0">
+                                                <thead>
+                                                    <tr class="text-info">
+                                                        <th>Muesca</th>
+                                                        <th>Requisito</th>
+                                                        <th>Precio (Geo)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="fs-6">
+                                                    <tr><td>1ra Muesca Extra</td><td>Tener 5 Amuletos</td><td>120</td></tr>
+                                                    <tr><td>2da Muesca Extra</td><td>Tener 10 Amuletos</td><td>500</td></tr>
+                                                    <tr><td>3ra Muesca Extra</td><td>Tener 18 Amuletos</td><td>900</td></tr>
+                                                    <tr><td>4ta Muesca Extra</td><td>Tener 25 Amuletos</td><td>1400</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-secondary rounded h-100 shadow-sm text-center">
+                                    <h4 class="text-info fw-bold">Páramos Fúngicos</h4>
+                                    <p class="text-light small">Derrota a los dos <b>Ogros Shrumal</b> (hongos gigantes que lanzan explosivos) cerca de la estación de la Reina.</p>
+                                    <img src="../../pictures/ogres.jpg" class="img-fluid rounded mt-2 border border-secondary" alt="Ogres">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-secondary rounded h-100 shadow-sm text-center">
+                                    <h4 class="text-info fw-bold">Cañón Nublado</h4>
+                                    <p class="text-light small">Se encuentra en una zona secreta llena de burbujas explosivas, justo encima de la habitación de Cornifer.</p>
+                                    <img src="../../pictures/fogCanyon.jpg" class="img-fluid rounded mt-2 border border-secondary" alt="Fog Canyon">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-secondary rounded h-100 shadow-sm text-center mt-3">
+                                    <h4 class="text-info fw-bold">Coliseo de los Tontos</h4>
+                                    <p class="text-light small">Obtenida como recompensa al completar la primera prueba: <b>La Prueba del Guerrero</b>.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-4 bg-dark border border-danger rounded h-100 shadow-sm text-center mt-3">
+                                    <h4 class="text-danger fw-bold">Compañía de Grimm</h4>
+                                    <p class="text-light small">Se obtiene al derrotar al <b>Maestro Grimm</b> (la primera fase) en el escenario principal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-warning">Gestión de Espacio</h2>
+                        <p class="fs-5 mb-4">Administrar tus muescas es el verdadero desafío táctico. Aquí tienes algunos ejemplos de costos para planificar tu "build":</p>
+                        
+                        <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-info rounded">
+                                    <h6 class="text-info mb-0">Brújula</h6>
+                                    <div class="fs-4 text-white">●</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-info rounded">
+                                    <h6 class="text-info mb-0">Corte Rápido</h6>
+                                    <div class="fs-4 text-white">● ● ●</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-info rounded">
+                                    <h6 class="text-info mb-0">Fuerza</h6>
+                                    <div class="fs-4 text-white">● ● ●</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-info rounded">
+                                    <h6 class="text-info mb-0">P. Chamán</h6>
+                                    <div class="fs-4 text-white">● ● ●</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5 text-center">Estado del Jugador</div>
+                    <div class="card-body text-center">
+                        <p class="text-white mb-2">Muescas Totales Encontradas:</p>
+                        <h1 class="display-1 fw-bold text-info">11</h1>
+                        <div class="progress bg-secondary" style="height: 10px;">
+                            <div class="progress-bar bg-info" style="width: 100%;"></div>
+                        </div>
+                        <p class="small text-muted mt-2">Nivel: Maestro de Amuletos</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-danger shadow">
+                    <div class="card-header bg-danger text-white fw-bold fs-5">Saber Pro: Sobrecarga</div>
+                    <div class="card-body text-white">
+                        <p class="small">Cuando tus muescas están llenas, puedes intentar equipar un amuleto pesado forzándolo varias veces. Esto activará la <b>Sobrecarga</b>.</p>
+                        <a href="../Sobrecarga/postSobrecarga.html" class="btn btn-outline-danger btn-sm w-100">Leer más sobre el daño x2</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-body text-center">
+                        <h6 class="text-white fw-bold">La Bendición de Salubra</h6>
+                        <p class="small text-muted">Si logras comprar todas las muescas y encontrar todos los amuletos (40), Salubra te venderá su "Bendición". Al sentarte en un banco, su fantasma aparecerá para regenerar tu ALMA continuamente.</p>
+                        <img src="../../pictures/bendicionSalubra.jpg" class="img-fluid mt-2" style="width: 80px;">
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow">
+                    <div class="card-header bg-secondary text-white fw-bold">Lista de Rastreo</div>
+                    <div class="card-body text-white">
+                        <ul class="list-unstyled small">
+                            <li><i class="fa fa-square-o text-info"></i> Salubra #1</li>
+                            <li><i class="fa fa-square-o text-info"></i> Salubra #2</li>
+                            <li><i class="fa fa-square-o text-info"></i> Salubra #3</li>
+                            <li><i class="fa fa-square-o text-info"></i> Salubra #4</li>
+                            <li><i class="fa fa-square-o text-info"></i> Ogros (Páramos)</li>
+                            <li><i class="fa fa-square-o text-info"></i> Cañón Nublado</li>
+                            <li><i class="fa fa-square-o text-info"></i> Coliseo</li>
+                            <li><i class="fa fa-square-o text-info"></i> Grimm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="py-5 bg-dark border-top border-info mt-5">
+            <div class="container text-center">
+                <h4 class="text-info fw-bold mb-3">"ADMINISTRA TU PODER COMO UN VERDADERO PAPU"</h4>
+                <p class="m-0 text-white fs-5">Muescas y Ranuras - Ivan Leon - ITI - UPSLP</p>
+                <p class="text-muted small">Programación Web I - 2026</p>
+            </div>
+        </footer>
+    </main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

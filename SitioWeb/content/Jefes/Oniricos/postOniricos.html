@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Jefes - Oniricos</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-3 text-info">Compendio de los Sueños y Pesadillas</h1>
+                        <div class="text-muted fst-italic mb-3 fs-4">"Corta el velo de la realidad y enfrenta los recuerdos que se niegan a morir."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary px-3 py-2">Esencia Onírica</span>
+                            <span class="badge bg-info text-dark px-3 py-2">Aguijón Onírico</span>
+                            <span class="badge bg-danger px-3 py-2">Pesadillas</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">Godmaster</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom pb-5">
+                        <figure class="mb-4">
+                            <img class="img-fluid rounded shadow-lg border border-info w-100" src="../../pictures/aguijonOnirico.jpg" style="height: 450px; object-fit: cover;" alt="El Aguijón Onírico" />
+                        </figure>
+                        <h2 class="fw-bolder display-5 mb-4">El Despertar de la Esencia</h2>
+                        <p class="fs-4">El <b>Aguijón Onírico</b> no es un arma física, sino una llave. Permite al Caballero recolectar Esencia, la sustancia de los sueños. Sin ella, es imposible acceder al Palacio Blanco o enfrentar al jefe final verdadero. La <b>Vidente</b>, última de la tribu de las polillas, nos guiará en este viaje espiritual.</p>
+                        
+                        <div class="alert alert-info bg-dark border-info text-light p-4 mt-4">
+                            <h4 class="fw-bold">Mecánica de Recolección</h4>
+                            <ul class="fs-5">
+                                <li><b>Enemigos comunes:</b> Dan alma pero no esencia.</li>
+                                <li><b>Raíces Susurrantes:</b> Liberan orbes de esencia por toda la zona.</li>
+                                <li><b>Fantasmas de Lore:</b> Diálogos ocultos y 1 de esencia al disiparlos.</li>
+                                <li><b>Jefes Oníricos:</b> La fuente principal (cientos de puntos por victoria).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom pb-5">
+                        <h2 class="fw-bolder display-5 mb-5 text-primary">I. Los Guerreros Oníricos</h2>
+                        <p class="fs-4 mb-5">Espíritus de antiguos héroes estancados en sus lugares de entierro. Cada uno ofrece un fragmento de su historia y una cantidad moderada de esencia.</p>
+
+                        <div class="row g-4">
+                            <div class="col-md-12 mb-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <img src="../../pictures/xero.jpeg" class="img-fluid rounded shadow border border-primary" alt="Xero">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3 class="fw-bold text-info">Xero (Las Tierras de Reposo)</h3>
+                                        <p class="fs-5">Ejecutado por traición. Ataca lanzando clavos flotantes. <b>Recompensa: 100 Esencia.</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8 text-end">
+                                        <h3 class="fw-bold text-info">Gorb (Acantilados Aulladores)</h3>
+                                        <p class="fs-5">"¡Yo soy Gorb!". La mente superior que dispara ráfagas de aguijones en 360 grados. <b>Recompensa: 100 Esencia.</b></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../../pictures/gorb.webp" class="img-fluid rounded shadow border border-primary" alt="Gorb">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <img src="../../pictures/elderHu.jpg" class="img-fluid rounded shadow border border-primary" alt="Elder Hu">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3 class="fw-bold text-info">Anciano Hu (Páramos Fúngicos)</h3>
+                                        <p class="fs-5">Ataques rítmicos de columnas de luz. Requiere el Dash Sombrío para sobrevivir. <b>Recompensa: 100 Esencia.</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="row align-items-center border-top border-secondary pt-4">
+                                    <div class="col-md-8">
+                                        <h3 class="fw-bold text-danger">Markoth (Límite del Reino)</h3>
+                                        <p class="fs-5">El más letal. No tiene suelo, peleas en plataformas mientras esquivas su escudo y clavos. <b>Recompensa: 250 Esencia.</b></p>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="../../pictures/markoth.webp" class="img-fluid rounded shadow border border-danger" alt="Markoth">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="p-3 bg-dark border border-secondary rounded">
+                                    <p class="fs-5 mb-0"><b>Otros Guerreros:</b> <b>Marmu</b> (150 E) en Jardines de la Reina, <b>No Eyes</b> (200 E) en Sendero Verde y <b>Galien</b> (200 E) en Nido Profundo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom pb-5">
+                        <h2 class="fw-bolder display-5 mb-5 text-danger">II. Jefes Pesadilla: Reminiscencias</h2>
+                        <p class="fs-4 mb-5">Versiones potenciadas de los jefes de Hallownest. Son más rápidos, agresivos y quitan <b>2 máscaras de daño</b> por golpe.</p>
+
+                        <div class="card bg-dark border-secondary mb-4 shadow">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="../../pictures/failedChampion.webp" class="img-fluid rounded-start" alt="Failed Champion">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-warning">Campeón Fallido</h3>
+                                        <p class="card-text fs-5">La pesadilla del Falso Caballero. Su velocidad de salto es casi instantánea y las rocas caen sin parar. <br><b>Esencia: 300</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark border-secondary mb-4 shadow text-end">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-warning">Tirano de Almas</h3>
+                                        <p class="card-text fs-5">La forma perfecta del Maestro de Almas. Teletransportes erráticos y una lluvia de orbes constante. <br><b>Esencia: 300</b></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="../../pictures/tiranodeAlmas.jpg" class="img-fluid rounded-end" alt="Soul Tyrant">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-dark border-secondary mb-4 shadow">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="../../pictures/ZOTEXDDD.avif" class="img-fluid rounded-start" alt="Grey Prince Zote">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-warning">Príncipe Gris Zote</h3>
+                                        <p class="card-text fs-5">La imaginación de Bretta hecha jefe. Caótico, ruidoso y letal. Puede llegar a quitar 10 máscaras por golpe. <br><b>Esencia: 300</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-5 text-warning">III. El Reino de la Pesadilla Roja</h2>
+                        <div class="row">
+                            <div class="col-md-12 mb-5">
+                                <img src="../../pictures/nightmare.webp" class="img-fluid rounded mb-4 w-100 shadow-lg border border-danger" style="height: 300px; object-fit: cover;" alt="Nightmare King">
+                                <h3 class="fw-bold text-danger">Rey Pesadilla Grimm</h3>
+                                <p class="fs-4">El jefe onírico más rápido fuera del DLC Godmaster. No es solo una pelea, es un baile rítmico donde un solo error significa la derrota. Representa el corazón de la Pesadilla y el ciclo eterno de la Compañía.</p>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="p-5 bg-dark border-start border-5 border-info rounded shadow">
+                                    <h2 class="text-info mb-4 fw-bold">Variantes de Godmaster (Godhome)</h2>
+                                    <p class="fs-5">En el Hogar de los Dioses, los sueños se vuelven "Absolutos". Aquí encontramos las versiones definitivas:</p>
+                                    <ul class="fs-5 text-light">
+                                        <li><b>Pure Vessel (Receptáculo Puro):</b> El Hollow Knight en su máximo esplendor sin infección.</li>
+                                        <li><b>Sisters of Battle:</b> Las 3 Mantis atacando simultáneamente.</li>
+                                        <li><b>Absolute Radiance:</b> La forma final de la luz, el reto más grande del juego.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5">Recompensas de Esencia</div>
+                    <div class="card-body p-0">
+                        <table class="table table-dark table-striped mb-0 text-center">
+                            <thead><tr><th>Esencia</th><th>Objeto / Logro</th></tr></thead>
+                            <tbody class="fs-6">
+                                <tr><td>100</td><td>Sello de Hallownest</td></tr>
+                                <tr><td>200</td><td>Puerta de la Vidente</td></tr>
+                                <tr><td>300</td><td>Mineral Pálido</td></tr>
+                                <tr><td>500</td><td>Amuleto Portador de Sueños</td></tr>
+                                <li>900</td><td>Portal Onírico (Teletransporte)</td></tr>
+                                <tr><td>1200</td><td>Huevo Arcano</td></tr>
+                                <tr><td>1800</td><td><b>Despertar Aguijón</b></td></tr>
+                                <tr><td>2400</td><td>Logro: Ascensión</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow">
+                    <div class="card-header ch fw-bold fs-5">Raíces Susurrantes</div>
+                    <div class="card-body ch">
+                        <p class="small">Pequeños árboles esparcidos por Hallownest que sueltan esencia al ser golpeados:</p>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge border border-info">Bocasucia: 42 E</span>
+                            <span class="badge border border-info">Ciudad de Lágrimas: 70 E</span>
+                            <span class="badge border border-info">Páramos Fúngicos: 63 E</span>
+                            <span class="badge border border-info">Nido Profundo: 45 E</span>
+                        </div>
+                        <p class="small mt-3 text-muted fst-italic">Existen 15 raíces en total por todo el mapa.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-warning shadow">
+                    <div class="card-header bg-warning text-dark fw-bold fs-5">Build para Sueños</div>
+                    <div class="card-body ch text-white">
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-warning">Portador de Sueños</h6>
+                            <p class="small">Carga el aguijón el doble de rápido y da 66 de alma.</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-warning">Concentración Rápida</h6>
+                            <p class="small">Indispensable contra el Tirano de Almas y NKG.</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-warning">Sombra Afilada</h6>
+                            <p class="small">Aumenta el daño al atravesar jefes rápidos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header ch fw-bold">Espíritus de Hallownest</div>
+                    <div class="card-body ch text-center">
+                        <img src="../../pictures/claro.jpg" class="img-fluid rounded border mb-3" alt="Claro de los Espíritus">
+                        <p class="small">En el <b>Claro de los Espíritus</b> puedes encontrar a decenas de fantasmas. Golpearlos te dará 1 de esencia, pero los borrarás para siempre. ¿Vale la pena el precio?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-secondary mt-5">
+        <div class="container text-center">
+            <p class="m-0 text-white fs-5">Compendio de Jefes - Ivan Leon - Ingeniería en Tecnologías de Información</p>
+            <p class="text-muted small">Proyecto Final: Programación Web I - UPSLP - 2026</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Mapa - Zonas</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main><header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-1 text-info" style="letter-spacing: -4px;">Mapas de Hallownest</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Desde las cumbres de cristal hasta el abismo más profundo; un reino conectado por la tragedia."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary px-3 py-2">Exploración</span>
+                            <span class="badge bg-success px-3 py-2">Zonas Principales</span>
+                            <span class="badge bg-info text-dark px-3 py-2">Guía de Cornifer</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-info pb-5 text-center text-md-start">
+                        <p class="fs-4">Explorar Hallownest es descifrar un laberinto antiguo. Cada zona posee su propia atmósfera, ecosistema y secretos. Gracias a la labor del cartógrafo <b>Cornifer</b>, podemos navegar por estos túneles. A continuación, presentamos un análisis detallado de cada región principal que compone el corazón del reino.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img src="../../pictures/bocasucia.jpg" class="img-fluid rounded shadow-lg border border-light" alt="Bocasucia">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="fw-bolder display-5 text-white">Bocasucia: El Pueblo Desvanecido</h2>
+                                <p class="fs-5">Conocido como "el pueblo más triste de Hallownest", es la superficie y el único lugar seguro. Aquí se encuentran los pocos sobrevivientes que aún mantienen la cordura.</p>
+                                <ul class="small text-info">
+                                    <li><b>Puntos clave:</b> Tienda de Sly, Tienda de Iselda, El Confesionario de Jiji.</li>
+                                    <li><b>Ambiente:</b> Melancólico, viento constante, música suave.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 order-2 order-md-1 text-end">
+                                <h2 class="fw-bolder display-5 text-warning">Cruces Olvidados</h2>
+                                <p class="fs-5">El centro neurálgico del reino. Conecta casi todas las áreas principales. Tras avanzar en el juego, se transforma en los <b>Cruces Infectados</b>, bloqueando caminos con crecimientos de luz naranja.</p>
+                                <ul class="small text-warning list-unstyled">
+                                    <li>Tienda de Salubra <b>·</b> Falso Caballero <b>·</b> Estación del Ciervo</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 order-1 order-md-2">
+                                <img src="../../pictures/crucesOlvidados.jpg" class="img-fluid rounded shadow-lg border border-warning" alt="Cruces">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-5 text-center">
+                                <img src="../../pictures/senderoVerde.jpg" class="img-fluid rounded shadow-lg border border-success" alt="Sendero Verde">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="fw-bolder display-5 text-success">Sendero Verde</h2>
+                                <p class="fs-5">Una zona exuberante llena de vegetación, lagos de ácido y vida silvestre protegida por los Unn. Es el primer lugar donde el Caballero encuentra a Hornet.</p>
+                                <div class="p-3 bg-dark border border-success rounded">
+                                    <small class="text-white">Aquí obtienes la <b>Capa de Ala de Polilla</b>, permitiéndote hacer el "Dash" por primera vez.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5 text-end">
+                        <h2 class="fw-bolder display-5 text-info">Páramos Fúngicos</h2>
+                        <p class="fs-5">Dominado por esporas, hongos gigantes y la orgullosa <b>Tribu de las Mantis</b>. Es una zona de plataformas rítmicas donde el rebote en los hongos es esencial para navegar.</p>
+                        <img src="../../pictures/paramosFungicos.jpg" class="img-fluid rounded shadow-lg border border-info mb-3 w-100" style="max-height: 300px; object-fit: cover;" alt="Páramos Fúngicos">
+                        <p class="small text-muted">Hogar de la Aldea Mantis y el acceso principal a Nido Profundo.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="../../pictures/cityOfTears.jpg" class="img-fluid rounded shadow-lg border border-primary" alt="Ciudad de Lágrimas">
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="fw-bolder display-5 text-primary">Ciudad de Lágrimas</h2>
+                                <p class="fs-5">La capital del reino, donde siempre llueve debido a los lagos que se encuentran sobre ella. Es el área más grande y detallada, hogar de la élite y los centros de investigación de alma.</p>
+                                <ul class="small text-white">
+                                    <li><b>Jefes:</b> Maestro de Almas, Caballeros Vigía.</li>
+                                    <li><b>NPCs:</b> Forjaguijones, Lemm el Buscador, Quirrel.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-light">Cumbre de Cristal</h2>
+                        <div class="row g-4">
+                            <div class="col-md-8">
+                                <p class="fs-5">Una mina masiva de cristales rosas con propiedades mágicas. La verticalidad es el desafío principal aquí. Los antiguos mineros ahora trabajan como cascarones vacíos controlados por la infección.</p>
+                                <div class="alert alert-light bg-dark border-light text-white">
+                                    <b>Objeto Clave:</b> El Corazón de Cristal (Super Dash).
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../../pictures/cumbreDeCristal.jpg" class="img-fluid rounded shadow border border-light" alt="Cumbre">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-danger pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img src="../../pictures/nidoProfundo.jpg" class="img-fluid rounded shadow-lg border border-danger" alt="Deepnest">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="fw-bolder display-5 text-danger">Nido Profundo</h2>
+                                <p class="fs-5">El área más hostil y oscura de Hallownest. No fue parte del reino del Rey Pálido. Está infestada de arañas, trampas y pasillos estrechos que se derrumban.</p>
+                                <p class="small text-danger fw-bold">"Donde la luz no se atreve a entrar y los extraños son devorados vivos."</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5 text-end">
+                        <h2 class="fw-bolder display-5 text-secondary">Límite del Reino</h2>
+                        <p class="fs-5">La frontera este del mundo, cubierta por una "nieve" constante que en realidad es la ceniza que cae del cadáver gigante de un Wyrm. Aquí se encuentra el <b>Coliseo de los Tontos</b>.</p>
+                        <img src="../../pictures/limiteDelReyno.jpg" class="img-fluid rounded shadow-lg border border-secondary mb-3 w-100" style="max-height: 300px; object-fit: cover;" alt="Límite">
+                    </section>
+
+                    <section class="mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h2 class="fw-bolder display-5" style="color: #6f42c1;">Cuenca Antigua</h2>
+                                <p class="fs-5">Ubicada debajo de la Ciudad de Lágrimas. Es un lugar desolado que guarda la entrada al Palacio Blanco y al Abismo. Aquí enfrentas al Receptáculo Roto.</p>
+                                <span class="badge bg-dark border border-purple p-2">Zona de Lore Crítico</span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="../../pictures/cuenca antigua.jpeg" class="img-fluid rounded shadow-lg border border-dark" alt="Cuenca">
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5 text-center">Rutas de Viaje</div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold">Estaciones de Ciervos</h6>
+                            <p class="small text-white">El método más rápido para viajar entre grandes zonas. Hay 11 estaciones en total.</p>
+                        </div>
+                        <div class="mb-0">
+                            <h6 class="text-info fw-bold">El Tranvía</h6>
+                            <p class="small text-white">Tecnología del Rey que conecta los niveles medios y bajos del reino.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-success shadow text-white">
+                    <div class="card-header bg-success text-white fw-bold fs-5">Tips de Cartógrafo</div>
+                    <div class="card-body">
+                        <p class="small"><b>1.</b> Sigue el rastro de papeles en el suelo para encontrar a Cornifer.</p>
+                        <hr class="bg-secondary">
+                        <p class="small"><b>2.</b> Compra la Brújula Caprichosa en Bocasucia; sin ella, el mapa no servirá de mucho.</p>
+                        <hr class="bg-secondary">
+                        <p class="small"><b>3.</b> Si Cornifer se va de una zona antes de que le compres el mapa, búscalo en la tienda de Iselda.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header bg-white text-dark fw-bold">Estadísticas del Reino</div>
+                    <div class="card-body text-white">
+                        <ul class="list-group list-group-flush bg-dark">
+                            <li class="list-group-item bg-dark text-white border-secondary small">Zonas Principales: 12</li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">Bancos para Descansar: 41</li>
+                            <li class="list-group-item bg-dark text-white border-secondary small">Secretos por zona: +10</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-primary shadow text-center p-3">
+                    <h6 class="text-primary fw-bold">El Diseño del Reino</h6>
+                    <p class="small text-muted">Hallownest fue diseñado verticalmente. Mientras más profundo bajas, más antiguo y oscuro se vuelve el lore, pasando de la civilización (Ciudad) a la naturaleza (Fúngicos) y finalmente al origen (Abismo).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-secondary mt-5 text-center">
+        <div class="container">
+            <h4 class="text-info fw-bold mb-3">"CADA PASO ES UNA HISTORIA"</h4>
+            <p class="m-0 text-white fs-5">Atlas de Hallownest - Ivan Leon - ITI - 186333 - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

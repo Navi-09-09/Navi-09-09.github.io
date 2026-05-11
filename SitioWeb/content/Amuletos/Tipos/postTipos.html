@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Amuletos - Tipos</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-2 text-info">Tipos de Amuletos</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Antiguos artefactos que contienen los deseos y habilidades de quienes los portaron."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary px-3 py-2">Artefactos</span>
+                            <span class="badge bg-info text-dark px-3 py-2">Habilidades Pasivas</span>
+                            <span class="badge bg-light text-dark px-3 py-2">Personalización</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-info pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-info w-100" src="../../pictures/amuletosBigPost.webp" style="height: 450px; object-fit: cover;" alt="Todos los Amuletos" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5">La vasta colección de 40 amuletos que definen tu estilo de juego</figcaption>
+                        </figure>
+                        <p class="fs-4">En <b>Hollow Knight</b>, los amuletos son objetos especiales que otorgan bonificaciones pasivas al Caballero. Desde aumentar el alcance de tu arma hasta permitirte lanzar hechizos más poderosos, estos objetos son la base de la personalización. Para equiparlos, el Caballero debe descansar en un banco y poseer suficientes <b>Muescas</b> libres.</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-primary">I. Combate y Maestría del Aguijón</h2>
+                        <p class="fs-4 mb-4">Amuletos diseñados para aquellos que prefieren el combate cuerpo a cuerpo y maximizar el daño físico de su arma.</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-primary h-100 shadow">
+                                    <div class="card-body">
+                                        <h5 class="text-info fw-bold">Marca de Orgullo / Largoaguijón</h5>
+                                        <p class="text-light">Aumentan drásticamente el alcance del aguijón, permitiéndote golpear enemigos desde una distancia segura.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-primary h-100 shadow">
+                                    <div class="card-body">
+                                        <h5 class="text-info fw-bold">Corte Rápido</h5>
+                                        <p class="text-light">Permite atacar a una velocidad mucho mayor, ideal para castigar jefes con ventanas de vulnerabilidad cortas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="p-3 bg-dark border border-primary rounded mt-3">
+                                    <p class="mb-0 text-white fs-5"><b>Otros ejemplos:</b> Fuerza Frágil/Irrompible, Piedra de Corte, Gloria del Maestro de Aguijones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-warning">II. Magia, Alma y Hechizos</h2>
+                        <p class="fs-4 mb-4 text-end">Enfocados en la generación de <b>ALMA</b> y el fortalecimiento de las habilidades espirituales.</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-5">
+                                <img src="../../pictures/piedraChaman.webp" class="img-fluid rounded border border-warning shadow" alt="Amuletos de Magia">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card bg-dark border-warning mb-3">
+                                    <div class="card-body">
+                                        <h5 class="text-warning fw-bold">Piedra de Chamán</h5>
+                                        <p class="text-white">Aumenta el tamaño y el daño de todos tus hechizos. Es considerado uno de los mejores amuletos del juego.</p>
+                                    </div>
+                                </div>
+                                <div class="card bg-dark border-warning">
+                                    <div class="card-body">
+                                        <h5 class="text-warning fw-bold">Torcedor de Hechizos</h5>
+                                        <p class="text-white">Reduce el coste de ALMA necesario para lanzar hechizos, permitiendo ataques consecutivos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-success">III. Supervivencia y Curación</h2>
+                        <p class="fs-4 mb-4">Vitales para los nuevos jugadores o para enfrentar áreas de plataformas extremas como el Sendero del Dolor.</p>
+                        
+                        <div class="row row-cols-1 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-success rounded text-center h-100 shadow-sm">
+                                    <h6 class="text-success fw-bold">Concentración Rápida</h6>
+                                    <p class="small text-white">Cura tus máscaras en casi la mitad de tiempo.</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-success rounded text-center h-100 shadow-sm">
+                                    <h6 class="text-success fw-bold">Corazón de Sangreazul</h6>
+                                    <p class="small text-white">Otorga máscaras adicionales de vida azul (no curables).</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 bg-dark border border-success rounded text-center h-100 shadow-sm">
+                                    <h6 class="text-success fw-bold">Canción de Larvas</h6>
+                                    <p class="small text-white">Gana ALMA cada vez que recibes daño.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-info">IV. Utilidad y Amuletos Únicos</h2>
+                        <p class="fs-4 mb-4">Estos amuletos cambian mecánicas del mundo o son piezas clave del lore de Hallownest.</p>
+                        
+                        <div class="card bg-dark border-info shadow mb-4">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 text-center">
+                                        <img src="../../pictures/brujulaCaprichosa.webp" style="width: 80px;" alt="Compass">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h5 class="text-info fw-bold">Brújula Caprichosa</h5>
+                                        <p class="mb-0 text-white">Muestra tu ubicación en el mapa. Aunque parezca simple, es el amuleto más usado por exploradores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-dark border border-light rounded shadow">
+                            <h4 class="text-white fw-bold mb-3">Amuletos de Lore Máximo</h4>
+                            <p class="fs-5 text-light">Existen amuletos como el <b>Alma de Rey</b> o el <b>Corazón del Vacío</b> que no pueden ser desequipados una vez obtenidos y son necesarios para desbloquear los finales secretos del juego.</p>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5 text-center">Vendedores Principales</div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold">Salubra (Cruces Olvidados)</h6>
+                            <p class="small text-white">Vende la mayor cantidad de amuletos y muescas adicionales.</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-info fw-bold">Sly (Bocasucia)</h6>
+                            <p class="small text-white">Vende algunos amuletos básicos de utilidad como la Brújula.</p>
+                        </div>
+                        <div class="mb-0">
+                            <h6 class="text-info fw-bold">Leg Eat (Páramos Fúngicos)</h6>
+                            <p class="small text-white">Vende los amuletos "Frágiles" que se rompen al morir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow">
+                    <div class="card-header bg-secondary text-white fw-bold fs-5">Resumen de Muescas</div>
+                    <div class="card-body text-white">
+                        <p class="small">Cada amuleto tiene un costo de muescas (del 1 al 4). Solo puedes equipar lo que tu capacidad permita.</p>
+                        <div class="p-2 bg-black rounded border border-secondary text-center">
+                            <h3 class="mb-0">Total: 11 Muescas</h3>
+                            <small class="text-muted">Capacidad máxima posible</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-primary shadow">
+                    <div class="card-header bg-primary text-white fw-bold">Consejos de Maestro</div>
+                    <div class="card-body text-white fs-6">
+                        <p><i class="fa fa-info-circle text-info"></i> <b>Bancos:</b> Los amuletos solo se pueden cambiar mientras estás sentado en un banco.</p>
+                        <hr class="bg-secondary">
+                        <p><i class="fa fa-info-circle text-info"></i> <b>Sinergias:</b> Algunos amuletos brillan cuando se usan juntos. ¡Prueba combinaciones!</p>
+                        <hr class="bg-secondary">
+                        <p><i class="fa fa-info-circle text-info"></i> <b>Amuletos Irrompibles:</b> Divine, en la Compañía de Grimm, puede convertir los amuletos frágiles en versiones permanentes por mucho Geo.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-body text-center">
+                        <h6 class="text-white fw-bold">Dato Curioso</h6>
+                        <p class="small text-muted">Cada amuleto está hecho de la esencia petrificada de un deseo o una habilidad. Al equiparlos, el Caballero absorbe una parte de la historia de quien lo creó.</p>
+                        <img src="../../pictures/amuletosSmallPost.png" class="img-fluid mt-2" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-info mt-5">
+        <div class="container text-center">
+            <h4 class="text-info fw-bold mb-3">"ENCUENTRA TU ESTILO DE COMBATE"</h4>
+            <p class="m-0 text-white fs-5">Tipos de Amuletos - Ivan Leon - ITI - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

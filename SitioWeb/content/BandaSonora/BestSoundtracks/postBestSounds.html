@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Banda Sonora - Mejores titulos</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    
+        <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-2 text-info" style="letter-spacing: -3px;">Mejores Soundtracks</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Una orquesta de melancolía y esperanza en el corazón de las ruinas."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary px-3 py-2 shadow-sm">Christopher Larkin</span>
+                            <span class="badge bg-light text-dark px-3 py-2 shadow-sm">Orquesta Filarmónica</span>
+                            <span class="badge bg-danger px-3 py-2 shadow-sm">Temas Épicos</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-info pb-5">
+                        <p class="fs-4">La banda sonora de **Hollow Knight** no es solo música de fondo; es el alma del juego. Compuesta por el genio **Christopher Larkin**, cada pista utiliza instrumentos reales y arreglos orquestales para contar la historia que los diálogos callan. Desde la soledad de Bocasucia hasta el frenesí de las pesadillas, aquí analizamos las mejores composiciones.</p>
+                        
+                        <div class="alert alert-info bg-dark border-info text-light p-4 mt-4 shadow">
+                            <h4 class="fw-bold"><i class="fa fa-music"></i> El Poder de la Inmersión</h4>
+                            <p class="fs-5 mb-0">Larkin utiliza <i>leitmotivs</i> (temas recurrentes) que evolucionan según el progreso del Caballero, creando una conexión emocional profunda entre el jugador y el mundo de Hallownest.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-primary mb-4">1. City of Tears</h2>
+                        <p class="fs-5 mb-4 text-light">Este tema define la atmósfera del juego. Con el uso de un piano melancólico y una voz femenina etérea, captura la tristeza de una capital que fue gloriosa y ahora llora eternamente. Es el momento donde muchos jugadores se enamoran del lore de Hallownest.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-primary mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/6ruSAeqxP14?si=Uvzp-rfjCluWPW-K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="small text-muted text-center fst-italic">"Lágrimas de lluvia cayendo sobre cristales olvidados."</p>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-success mb-4 text-end">2. Hornet</h2>
+                        <p class="fs-5 text-end text-light">Un tema impulsado por cuerdas frenéticas y un violonchelo agresivo. Refleja perfectamente la agilidad y la determinación de Hornet. Es una danza mortal que te mantiene en tensión constante durante el enfrentamiento en Greenpath.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-success mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/G_iO5IHnBTE?si=__lI8zB71Mtwrq00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-danger mb-4">3. Nightmare King</h2>
+                        <p class="fs-5 text-light">Gótico, rápido y explosivo. El uso del órgano y los coros intensos crea una atmósfera de ritual satánico que encaja perfectamente con el jefe más rápido del juego. Es una pieza que exige perfección y ritmo absoluto.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-danger mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gDJGY92Gv6k?si=z6FSyqtMRZMtEnPQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-secondary pb-5">
+                        <h2 class="fw-bolder display-5 text-info mb-4 text-end">4. Sealed Vessel</h2>
+                        <p class="fs-5 text-end text-light">Posiblemente la pieza más triste del juego. Comienza como un combate épico y, a mitad de la pelea, la música cambia drásticamente a un violín solitario y desgarrador mientras el Hollow Knight empieza a apuñalarse a sí mismo.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-info mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ze0Rk-m0w2A?si=2vDz00Pv-NIWNqhN&amp;start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 text-warning mb-4">5. Radiance</h2>
+                        <p class="fs-5 text-light">Un tema celestial que utiliza coros operísticos para representar la divinidad de Destello. Transmite una sensación de escala masiva y peligro inminente, recordándote que estás luchando contra una diosa en el plano de los sueños.</p>
+                        
+                        <div class="ratio ratio-16x9 shadow-lg rounded border border-warning mb-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SkD5Ceo8KAo?si=my4XqSGZH7y7qJ2e&amp;start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-info shadow">
+                    <div class="card-header bg-info text-dark fw-bold fs-5 text-center">Sobre el Autor</div>
+                    <div class="card-body text-center text-white">
+                        <h5 class="fw-bold">Christopher Larkin</h5>
+                        <p class="small">Compositor australiano que utilizó su experiencia en el cine y la televisión para dar vida a Hallownest. Su trabajo le valió múltiples nominaciones a premios de música para videojuegos.</p>
+                        <div class="p-2 bg-black rounded border border-info">
+                            <small class="text-info">Instrumento Principal: Piano y Orquesta</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-secondary shadow text-white">
+                    <div class="card-header bg-secondary text-white fw-bold fs-5">Ediciones Especiales</div>
+                    <div class="card-body">
+                        <p class="small">La banda sonora fue tan exitosa que se lanzaron ediciones de colección en <b>Vinilo</b> y CD, con arte exclusivo de Team Cherry.</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fa fa-check text-info"></i> OST Original (26 pistas)</li>
+                            <li><i class="fa fa-check text-info"></i> Gods & Nightmares (15 pistas extra)</li>
+                            <li><i class="fa fa-check text-info"></i> Piano Collections (Arreglos acústicos)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                <div class="card mb-4 bg-dark border-primary shadow">
+                    <div class="card-body text-center text-white">
+                        <h6 class="text-primary fw-bold">Banda Sonora Completa</h6>
+                        <p class="small mb-3">Puedes escuchar el álbum completo en plataformas digitales:</p>
+                        <div class="d-flex justify-content-around">
+                            <span class="badge bg-success p-2"><i class="fa fa-spotify"></i> Spotify</span>
+                            <span class="badge bg-danger p-2"><i class="fa fa-youtube"></i> Music</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-info mt-5 text-center">
+        <div class="container text-white">
+            <h4 class="text-info fw-bold mb-3">"LA MÚSICA ES EL ECO DE HALLOWNEST"</h4>
+            <p class="m-0 fs-5">La de hornet esta regod! - Ivan Leon - ITI - 186333 - UPSLP</p>
+            <p class="text-muted small">Programación Web I - 2026</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

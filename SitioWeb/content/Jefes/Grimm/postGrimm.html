@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Jefes - Grimm</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-5">
+                        <h1 class="fw-bolder mb-1 display-2 text-danger">La Compañía de Grimm</h1>
+                        <div class="text-muted fst-italic mb-3 fs-3">"Enciende el farol, llama a la compañía. El ritual debe consumarse."</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-danger px-3 py-2">DLC: The Grimm Troupe</span>
+                            <span class="badge bg-dark border border-danger text-danger px-3 py-2">Ritual de Pesadilla</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">Jefe de Élite</span>
+                        </div>
+                    </header>
+
+                    <section class="mb-5 border-bottom border-danger pb-5">
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow-lg border border-danger w-100" src="../../pictures/companyGrimm.jpg" style="height: 500px; object-fit: cover;" alt="La Compañía de Grimm" />
+                            <figcaption class="fst-italic mt-2 text-muted fs-5">La llegada de las carpas escarlatas a Bocasucia</figcaption>
+                        </figure>
+                        <h2 class="fw-bolder display-4 mb-4 text-danger">El Maestro de la Danza</h2>
+                        <p class="fs-4"><b>Grimm</b> es el enigmático líder de la Compañía de Grimm, una feria ambulante que viaja a través de los reinos caídos para recolectar la llama de las pesadillas. Su llegada a Hallownest marca el inicio de un ritual antiguo destinado a alimentar al Corazón de la Pesadilla y asegurar el renacimiento de su linaje.</p>
+                        
+                        <div class="p-4 bg-dark border-start border-5 border-danger rounded mt-4">
+                            <h4 class="text-danger fw-bold">Cómo Iniciar el DLC</h4>
+                            <p class="fs-5 mb-0 text-white">Debes dirigirte a los <b>Acantilados Aulladores</b>, encontrar el cadáver de un insecto grande en una pared oculta y golpear el farol con el Aguijón Onírico. Al encender la llama roja, las carpas aparecerán en Bocasucia.</p>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-danger pb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h2 class="fw-bolder display-5 mb-4 text-white">Fase 1: El Maestro</h2>
+                                <p class="fs-5">El primer encuentro con Grimm es una coreografía perfecta. Él no pelea para matarte de forma bruta, sino para poner a prueba tus reflejos en una danza de fuego y acero.</p>
+                                <ul class="fs-5 text-light">
+                                    <li><b>Embestida y Uppercut:</b> Grimm se desliza y lanza bolas de fuego.</li>
+                                    <li><b>Capa de Murciélagos:</b> Lanza tres proyectiles ígneos a distancia.</li>
+                                    <li><b>Pinchos de Suelo:</b> Clava su capa en el suelo creando lanzas verticales.</li>
+                                    <li><b>Modo Globo:</b> Se infla y lanza fuego en todas direcciones (ocurre al 75%, 50% y 25% de vida).</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../../pictures/maestroGrimm.webp" class="img-fluid rounded shadow border border-danger" alt="Maestro Grimm">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5 border-bottom border-danger pb-5 bg-gradient p-4 rounded" style="background: rgba(139, 0, 0, 0.1);">
+                        <h2 class="fw-bolder display-4 mb-4 text-danger text-center">Rey Pesadilla Grimm</h2>
+                        <p class="fs-4 text-center mb-5">El desafío definitivo. Al usar el Aguijón Onírico sobre Grimm mientras duerme, entras en el <b>Corazón de la Pesadilla</b>. Aquí, la velocidad se duplica y cada golpe cuesta <b>2 máscaras</b>.</p>
+
+                        <div class="row g-4">
+                            <div class="col-md-12">
+                                <img src="../../pictures/grimmOstia.jpg" class="img-fluid rounded shadow-lg border border-danger mb-4 w-100" style="max-height: 400px; object-fit: cover;" alt="Nightmare King Grimm">
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="text-white fw-bold border-bottom border-danger pb-2">Cambios Mecánicos</h4>
+                                <ul class="fs-5 text-light">
+                                    <li><b>Rastro de Fuego:</b> Sus ataques dejan llamas residuales en el suelo.</li>
+                                    <li><b>Pilares de Llama:</b> Invoca 4 pilares de fuego que te persiguen desde el suelo al cielo.</li>
+                                    <li><b>Velocidad Extrema:</b> Casi no hay tiempo para curarse entre ataques.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="text-white fw-bold border-bottom border-danger pb-2">El Ritual Onírico</h4>
+                                <p class="fs-5 text-light">Vencer a NKG es completar el ritual. El <b>Niño de Grimm</b> absorberá al Rey y alcanzará su forma final, convirtiéndose en el compañero más poderoso del juego.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="fw-bolder display-5 mb-4 text-white">El Camino del Destierro</h2>
+                        <p class="fs-4">Si decides que el ritual es un ciclo de sufrimiento sin fin, puedes hablar con <b>Brumm</b> en Nido Profundo. Él te ofrecerá destruir el farol para desterrar a la Compañía de Hallownest para siempre.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-danger h-100 shadow">
+                                    <div class="card-body">
+                                        <h5 class="text-danger fw-bold">Completar el Ritual</h5>
+                                        <p class="small text-white">Enfrentas a NKG. El Niño de Grimm llega a su máximo nivel. Obtienes el amuleto del Niño completo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-dark border-info h-100 shadow">
+                                    <div class="card-body">
+                                        <h5 class="text-info fw-bold">Destierro</h5>
+                                        <p class="small text-white">La compañía desaparece. El Niño de Grimm se pierde, pero obtienes el amuleto <b>Melodía Descuidada</b> (probabilidad de ignorar daño).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 bg-dark border-danger shadow">
+                    <div class="card-header bg-danger text-white fw-bold fs-5 text-center">Ficha del Maestro</div>
+                    <div class="card-body p-0">
+                        <table class="table table-dark table-hover mb-0 text-center">
+                            <tbody>
+                                <tr><td class="text-danger fw-bold">Salud (Maestro)</td><td>1000</td></tr>
+                                <tr><td class="text-danger fw-bold">Salud (NKG)</td><td>1500</td></tr>
+                                <tr><td class="text-danger fw-bold">Daño (NKG)</td><td>2 Máscaras</td></tr>
+                                <tr><td class="text-danger fw-bold">Dificultad</td><td>S++</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-warning shadow">
+                    <div class="card-header bg-warning text-dark fw-bold fs-5">Build Antipesadilla</div>
+                    <div class="card-body text-white">
+                        <div class="mb-3 d-flex align-items-center">
+                            <img src="../../pictures/charmStrength.png" style="width: 40px;" class="me-3">
+                            <div>
+                                <h6 class="mb-0 text-warning">Fuerza Irrompible</h6>
+                                <small>Acorta la pelea aumentando tu daño un 50%.</small>
+                            </div>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center">
+                            <img src="../../pictures/charmQuickSlash.png" style="width: 40px;" class="me-3">
+                            <div>
+                                <h6 class="mb-0 text-warning">Corte Rápido</h6>
+                                <small>Para castigar a Grimm en sus ventanas de 1 segundo.</small>
+                            </div>
+                        </div>
+                        <div class="mb-0 d-flex align-items-center">
+                            <img src="../../pictures/charmMarkOfPride.png" style="width: 40px;" class="me-3">
+                            <div>
+                                <h6 class="mb-0 text-warning">Marca de Orgullo</h6>
+                                <small>Mantén la distancia mientras golpeas.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-light shadow">
+                    <div class="card-header bg-white text-dark fw-bold">Tips de Supervivencia</div>
+                    <div class="card-body text-white fs-6">
+                        <p>🔹 <b>No persigas:</b> Grimm siempre viene a ti. Quédate en el centro.</p>
+                        <p>🔹 <b>Cura solo en los pinchos:</b> Es el único ataque que te da tiempo para una máscara.</p>
+                        <p>🔹 <b>El salto es clave:</b> En sus ataques de embestida, salta y haz "pogo" sobre su cabeza.</p>
+                        <p>🔹 <b>NKG es memoria:</b> No intentes reaccionar, entrena tus dedos para que se muevan solos al ver su capa.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 bg-dark border-danger shadow">
+                    <div class="card-body text-center">
+                        <h6 class="text-danger fw-bold">El Corazón de la Pesadilla</h6>
+                        <p class="small text-muted">Grimm es solo un receptáculo para el Corazón. El ritual asegura que el Corazón nunca muera, naciendo de nuevo en el Niño de Grimm una vez que el Caballero derrota al antiguo maestro.</p>
+                        <img src="../../pictures/grimmPerfil.jpg" class="img-fluid mt-2" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark border-top border-danger mt-5">
+        <div class="container text-center">
+            <h4 class="text-danger fw-bold mb-3">"¡QUE EL RITUAL COMIENCE!"</h4>
+            <p class="m-0 text-white fs-5">Guía de Grimm - Ivan Leon - UPSLP - WEB I</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

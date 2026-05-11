@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- 1er cambio: Agregar título a la página -->
+        <title>Jefes - Receptaculo roto</title>
+        <!-- 2do cambio: Agregar el íucono de la pestaña (Favicon) -->
+        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+        <!--NECESARIO PARA EL NAVXD-->
+        <script src="../assets/js/color-modes.js"></script>
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="carousel.css" rel="stylesheet" />
+            <link href="font_awesome/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+        <style>
+        body {
+            background-color: rgb(16, 16, 15) !important;
+            color: white;
+        }
+
+        .logo {
+            max-width: 200px;
+        }
+
+        .box-minitext {
+            color: lightcyan;
+        }
+
+        .box-hov:hover {
+            color: black;
+            background-color: #FFF;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bsearch {
+            background-color: rgba(47, 47, 139, 0.473);
+            color: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .Bsearch:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 255);
+            border-color: rgb(0, 0, 255);
+        }
+
+        .Bdetails:hover {
+            background-color: wheat;
+            color: black;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .Bcarrusel:hover {
+            background-color: aliceblue;
+            color: blue;
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+        .items-nav {
+            color: aliceblue;
+        }
+
+        .items-nav:hover {
+            /* Ancho y color del borde del texto */
+            -webkit-text-stroke: 0.8px rgb(94, 78, 241); 
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+
+
+        .search-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden; /* Evita que las palabras se salgan del área */
+            border-radius: .375rem;
+        }
+
+        .background-keywords {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            z-index: 0; /* Va detrás del input */
+            opacity: 0;
+            transition: 0.2s ease;
+            pointer-events: none; /* Permite hacer clic a través de las letras */
+            color: #ffffff;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .background-keywords span {
+            margin-right: 10px;
+        }
+
+        /* Efecto Hover */
+        .search-wrapper:hover .background-keywords {
+            opacity: 0.4; /* Se ven tenuemente */
+        }
+
+        .bar:hover::placeholder {
+            color: transparent; /* Hace la palabra invisible */
+            transition: color 0.1s ease; 
+        }
+
+        .bar {
+            position: relative;
+            background: transparent !important; /* Vital para que se vea el fondo */
+            z-index: 1;
+        }
+
+        /* Opcional: ocultar palabras al escribir para que no estorben */
+        .bar:focus {
+            color: black;
+            background: white !important;
+        }
+
+
+
+
+        /* Estilos generales de la plantilla */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .carousel-item {
+            height: 90vh; /* 80vh significa el 80% de la altura de la pantalla */
+            min-height: 500px; /* Para que en celulares no se vea minúsculo */
+        }
+
+        /* Ajuste para que tus imágenes del carrusel se vean bien */
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .carousel-caption h1, .carousel-caption p {
+            color: white; /* Asegura que sea blanco */
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Sombra negra difuminada */
+        }
+
+        .posthk {
+            width: 700px;
+            height: 400px;
+        }
+
+        .ch {
+            color: black;
+        }
+
+    </style>
+
+
+
+
+    </head>
+
+    <body>
+
+        <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../pictures/logoOFICIAL.png" alt="Logo" class="d-inline-block align-text-top logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link items-nav" href="../../../index.html">Inicio</a></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Personajes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Characters/hollow/postHollow.html">Hollow Knight</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/hornet/postHornet.html">Hornet</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/ReyPalido/postReyPalido.html">Rey palido</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Cornifer/postCornifer.html">Cornifer</a></li>
+                  <li><a class="dropdown-item" href="../../Characters/Zote/postZote.html">Zote</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Jefes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Jefes/Soñadores/postSoñadores.html">Soñadores</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Receptaculo/postReceptaculo.html">Receptaculo</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Radiance/postRadiance.html">Radiance</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Oniricos/postOniricos.html">Oniricos</a></li>
+                  <li><a class="dropdown-item" href="../../Jefes/Grimm/postGrimm.html">Grimm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Jefes/JefesSecretos/postJefesSecretos.html">Jefes secretos y especiales</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Amuletos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Amuletos/Tipos/postTipos.html">Tipos de amuletos</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Sobrecarga/postSobrecarga.html">Sobrecarga</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Combinaciones/postCombinaciones.html">Combinaciones</a></li>
+                  <li><a class="dropdown-item" href="../../Amuletos/Muescas/postMuescas.html">Muescas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Lore
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Historia/Hallownest/postHallownest.html">Hallownest</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/ElVacio/postElVacio.html">El Vacio</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/LaInfeccion/postInfeccion.html">La infeccion</a></li>
+                  <li><a class="dropdown-item" href="../../Historia/PalacioBlanco/postPalacioBlanco.html">Palacio blanco</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mapa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Mapa/mapaCompleto/postMapa.html">Zonas del mapa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../Mapa/ZonasSecretas/postZonasSecretas.html">Zonas secretas</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Banda Sonora
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../BandaSonora/BestSoundtracks/postBestSounds.html">Mejores Soundtracks</a></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/Compositor/postCompositor.html">Compositor</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../../BandaSonora/TemasExtra/postExtraThemes.html">Temas extra</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle items-nav" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Creadores
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../../Creator/TeamCherry/postTeamCherry.html">Team Cherry</a></li>
+                  <li><a class="dropdown-item" href="../../references.html">Referencias</a></li>
+                  <li><a class="dropdown-item" href="../../contact.html">Contacto</a></li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <form class="d-flex search-wrapper">
+
+              <div class="background-keywords">
+                <span>Personajes</span> <span>Juegos</span> <span>Música</span> <span>Tutoriales</span>
+              </div>
+
+              <input class="form-control me-2 bar" type="search" placeholder="Search" aria-label="¿Buscas algo?">
+              <button class="btn btn-outline-success Bsearch" type="submit">Buscar</button>
+            </form>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+        
+        
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+        <hr class="featurette-divider" />
+
+    <main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-4">
+                        <h1 class="fw-bolder mb-1">The Hollow Knight: El Sacrificio Final</h1>
+                        <div class="text-muted fst-italic mb-2">"Sin mente que piense. Sin voluntad que quebrantar. Sin voz que grite de sufrimiento."</div>
+                        <a class="badge bg-dark text-decoration-none border border-secondary link-light" href="#!">Jefe Final</a>
+                        <a class="badge bg-warning text-dark text-decoration-none" href="#!">Infección</a>
+                        <a class="badge bg-primary text-decoration-none link-light" href="#!">Lore Principal</a>
+                    </header>
+
+                    <figure class="mb-4 text-center">
+                        <img class="img-fluid rounded posthk shadow-lg" src="../../pictures/vasijaEncadenada.jpg" alt="El Receptáculo en el Templo" />
+                        <figcaption class="fst-italic mt-2 text-muted">El Receptáculo encadenado dentro del Templo del Huevo Negro</figcaption>
+                    </figure>
+
+                    <section class="mb-5">
+                        <div class="alert alert-dark border-secondary bg-dark text-light mb-4" role="alert">
+                            <strong>Nota de Lore:</strong> Esta vasija fue elegida por el Rey Pálido entre miles para contener la Infección de Destello y salvar Hallownest, pero una "idea instalada" (su vínculo con el Rey) lo hizo impuro.
+                        </div>
+
+                        <p class="fs-5 mb-4">El combate contra <b>The Hollow Knight</b> no es solo la prueba final de habilidad, sino el clímax emocional de la historia. Tras romper los sellos de los tres Soñadores, el Caballero finalmente accede a la prisión de su hermano para cumplir su destino: reemplazarlo o destruir la fuente de la plaga.</p>
+                        
+                        <p class="fs-5 mb-4">A pesar de su imponente estatura y su maestría con el aguijón, el Receptáculo está visiblemente deteriorado; su brazo izquierdo es inútil y la infección brota de sus grietas, mostrando que el sello ha fallado casi por completo.</p>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">El Descenso a la Tragedia (Fases)</h2>
+                        <p class="fs-5 mb-4">A diferencia de otros jefes, esta batalla cambia drásticamente de tono a medida que avanza, pasando de un duelo épico a una escena desgarradora.</p>
+
+                        <div class="row my-4">
+                            <div class="col-md-6">
+                                <div class="p-3 border border-secondary rounded bg-dark mb-3">
+                                    <h5 class="text-warning">Fase 1 y 2: El Guerrero</h5>
+                                    <p class="small mb-0 text-white">Ataques rápidos con aguijón, embestidas y pilares de fuego naranja. Se mueve con una agilidad sorprendente a pesar de su tamaño.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 border border-secondary rounded bg-dark mb-3">
+                                    <h5 class="text-danger">Fase 3: El Quebrantamiento</h5>
+                                    <p class="small mb-0 text-white">El Receptáculo comienza a <b>apuñalarse a sí mismo</b>. Sus movimientos se vuelven torpes y empieza a lanzar globos de infección masivos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <blockquote class="blockquote border-start border-4 border-primary ps-4 my-4 fst-italic">
+                            "Un receptáculo puro no tiene emociones. Pero este... este amaba a su padre. Esa chispa de humanidad fue la que permitió que la infección se filtrara."
+                        </blockquote>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">Habilidades de la Infección</h2>
+                        <p class="fs-5 mb-4">A medida que el sello se rompe durante la pelea, el Receptáculo utiliza el poder de Destello para intentar detenernos:</p>
+                        
+                        <ul class="fs-5 mb-4">
+                            <li><b>Lluvia de Infección:</b> Se eleva y dispara múltiples ráfagas de jugo naranja desde su pecho.</li>
+                            <li><b>Golpe de Rebote:</b> Salta y rebota por la arena tratando de aplastar al Caballero.</li>
+                            <li><b>Grito Sordo:</b> Un rugido que libera una onda de choque, inmovilizando al jugador por un segundo.</li>
+                        </ul>
+
+                        <figure class="mb-4 text-center">
+                            <img class="img-fluid rounded shadow" src="../../pictures/apuñalandose.webp" alt="The Hollow Knight apuñalandose" />
+                            <figcaption class="fst-italic mt-2 text-muted">Uno de los momentos más tristes: la vasija intenta ayudarnos a terminar con su agonía</figcaption>
+                        </figure>
+
+                        <h2 class="fw-bolder mb-4 mt-5 border-bottom pb-2">Los Múltiples Finales</h2>
+                        <p class="fs-5 mb-4">Dependiendo de si posees el amuleto <b>Corazón del Vacío</b> y de tu actuación cuando Hornet interviene, esta batalla puede llevarte a tres finales diferentes, incluyendo el enfrentamiento contra el verdadero enemigo: Destello.</p>
+                    </section>
+                </article>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 shadow-sm border-primary">
+                    <div class="card-header bg-primary text-white">Ficha de la Vasija</div>
+                    <div class="card-body ch">
+                        <table class="table table-sm mb-0">
+                            <tbody>
+                                <tr><td><strong>Origen:</strong></td><td>El Abismo</td></tr>
+                                <tr><td><strong>Creador:</strong></td><td>Rey Pálido</td></tr>
+                                <tr><td><strong>Estado:</strong></td><td>Infectado</td></tr>
+                                <tr><td><strong>Ubicación:</strong></td><td>Huevo Negro</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header ch fw-bold">Variante: Receptáculo Puro</div>
+                    <div class="card-body ch text-center">
+                        <figure class="mb-3 ch">
+                            <img class="img-fluid rounded border shadow-sm" src="../../pictures/pureVessel.jpg" alt="Pure Vessel" />
+                        </figure>
+                        <p class="small">En el Hogar de los Dioses (DLC), puedes enfrentarlo en su forma original y perfecta: el <b>Pure Vessel</b>, sin infección y con todo su poder.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 ch">
+                    <div class="card-header ch fw-bold text-primary">Estrategia de Victoria</div>
+                    <div class="card-body ch">
+                        <div class="d-flex mb-3">
+                            <div class="badge bg-info me-2" style="height: fit-content;">!</div>
+                            <small><b>Cura en el grito:</b> Cuando el jefe grita para cambiar de fase, tienes una ventana perfecta para curar 2 o 3 máscaras.</small>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="badge bg-info me-2" style="height: fit-content;">!</div>
+                            <small><b>Pogo:</b> Muchos de sus ataques de suelo se pueden esquivar fácilmente haciendo "pogo" sobre su cabeza con el aguijón.</small>
+                        </div>
+                        <div class="d-flex">
+                            <div class="badge bg-info me-2" style="height: fit-content;">!</div>
+                            <small><b>Sombra:</b> Usa la Capa Sombría para atravesar sus ataques de carga, ya que su hitbox es muy alta.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header ch fw-bold">Relacionados</div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Destello (Radiance)</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">El Rey Pálido</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Las Alas de Monarca</a>
+                            <a href="#!" class="list-group-item list-group-item-action ch py-1">Corazón del Vacío</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="py-5 bg-dark border-top border-secondary mt-5">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Todos los derechos reservados | Ivan Leon - ITI - 186333 - UPSLP - WEB 1</p>
+        </div>
+    </footer>
+</main>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
